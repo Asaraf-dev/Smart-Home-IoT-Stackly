@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111719">
+    <title>Dashboard | Stackly Smart Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="sh-dashboard-body">
+    <!--- Dashboard Layout --->
+    <div class="sh-dashboard-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sh-dashboard-overlay" id="sh-dashboard-overlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="sh-dashboard-sidebar" id="sh-dashboard-sidebar" aria-label="Dashboard navigation">
+            <!--- Sidebar Logo --->
+            <a class="sh-dashboard-brand">
+                <span class="sh-dashboard-brand-icon"><i class="bi bi-house-gear-fill"></i></span>
+                <span class="sh-dashboard-brand-text"> STACKLY<span>SMART HOME</span></span>
+                <button type="button" class="sh-dashboard-close" id="sh-dashboard-close" aria-label="Close navigation">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </a>
+
+            <!--- Mobile Account Details --->
+            <div class="sh-dashboard-mobile-user">
+                <img src="assets/images/profile-1.webp" alt="Profile"
+                    class="sh-dashboard-avatar sh-dashboard-avatar-mobile">
+                <div class="sh-dashboard-user-details">
+                    <span class="sh-dashboard-user-label">SIGNED IN AS</span>
+                    <span class="sh-dashboard-sidebar-email" data-sh-user-email>Loading account...</span>
+                    <span class="sh-dashboard-user-role" data-sh-user-role>Smart Home User</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <div class="sh-dashboard-nav-heading">WORKSPACE</div>
+            <nav class="sh-dashboard-nav">
+                <a href="admin-dashboard.html" class="sh-dashboard-nav-link" data-sh-nav="dashboard">
+                    <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+                </a>
+                <a href="admin-products.html" class="sh-dashboard-nav-link" data-sh-nav="devices">
+                    <i class="bi bi-cpu"></i><span>Products</span>
+                </a>
+                <a href="admin-analytics.html" class="sh-dashboard-nav-link is-active" data-sh-nav="analytics">
+                    <i class="bi bi-graph-up-arrow"></i><span>Analytics</span>
+                </a>
+                <a href="admin-profile.html" class="sh-dashboard-nav-link" data-sh-nav="profile">
+                    <i class="bi bi-person-circle"></i><span>Profile</span>
+                </a>
+            </nav>
+
+            <!--- Sidebar Bottom --->
+            <div class="sh-dashboard-sidebar-bottom">
+                <div class="sh-dashboard-status">
+                    <span class="sh-dashboard-status-dot"></span>
+                    <span>Smart home workspace</span>
+                </div>
+                <button type="button" class="sh-dashboard-nav-link sh-dashboard-logout" id="sh-dashboard-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="sh-dashboard-main">
+            <!--- Topbar --->
+            <header class="sh-dashboard-topbar">
+                <div class="sh-dashboard-topbar-left">
+                    <button type="button" class="sh-dashboard-menu-toggle" id="sh-dashboard-menu-toggle"
+                        aria-label="Open navigation" aria-controls="sh-dashboard-sidebar" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="sh-dashboard-page-heading">
+                        <span class="sh-dashboard-page-eyebrow">SMART HOME CONTROL CENTER</span>
+                        <h1 class="sh-dashboard-page-title" id="sh-dashboard-page-title">Dashboard</h1>
+                    </div>
+                </div>
+
+                <!--- Desktop And Tablet Account --->
+                <div class="sh-dashboard-topbar-right">
+                    <div class="sh-dashboard-topbar-account">
+                        <span class="sh-dashboard-topbar-email" data-sh-user-email>Loading account...</span>
+                        <span class="sh-dashboard-topbar-status"><span></span> Account active</span>
+                    </div>
+                    <button type="button" class="sh-dashboard-profile-button" id="sh-dashboard-profile-button"
+                        aria-label="Open profile" title="Open profile">
+                        <img src="assets/images/profile-1.webp" alt="Profile" class="sh-dashboard-avatar">
+                    </button>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+            <!--- Admin Analytics --->
+            <main class="sh-dashboard-content">
+                <section class="sh-analytics">
+
+                    <!--- Analytics Heading --->
+                    <div class="sh-analytics-heading">
+                        <div>
+                            <span class="sh-analytics-eyebrow">BUSINESS INTELLIGENCE</span>
+                            <h2>Analytics Overview</h2>
+                            <p>Track your smart home store performance and inventory trends.</p>
+                        </div>
+                        <div class="sh-analytics-heading-actions">
+                            <label class="sh-analytics-date">
+                                <i class="bi bi-calendar3"></i>
+                                <select id="sh-analytics-period" aria-label="Analytics date range">
+                                    <option value="7">Last 7 days</option>
+                                    <option value="30" selected>Last 30 days</option>
+                                    <option value="90">Last 90 days</option>
+                                </select>
+                            </label>
+                            <button type="button" class="sh-analytics-export" id="sh-analytics-export">
+                                <i class="bi bi-download"></i><span>Export CSV</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--- Analytics KPI Cards --->
+                    <div class="sh-analytics-kpis">
+                        <article class="sh-analytics-kpi">
+                            <div class="sh-analytics-kpi-top">
+                                <span>Total Revenue</span>
+                                <span class="sh-analytics-kpi-icon"><i class="bi bi-currency-rupee"></i></span>
+                            </div>
+                            <strong id="sh-analytics-revenue">₹0</strong>
+                            <div class="sh-analytics-kpi-bottom">
+                                <span class="sh-analytics-change" id="sh-analytics-revenue-change"><i
+                                        class="bi bi-arrow-up-right"></i> +0%</span>
+                                <span>vs previous period</span>
+                            </div>
+                        </article>
+                        <article class="sh-analytics-kpi">
+                            <div class="sh-analytics-kpi-top">
+                                <span>Total Orders</span>
+                                <span class="sh-analytics-kpi-icon"><i class="bi bi-bag-check"></i></span>
+                            </div>
+                            <strong id="sh-analytics-orders">0</strong>
+                            <div class="sh-analytics-kpi-bottom">
+                                <span class="sh-analytics-change" id="sh-analytics-orders-change"><i
+                                        class="bi bi-arrow-up-right"></i> +0%</span>
+                                <span>vs previous period</span>
+                            </div>
+                        </article>
+                        <article class="sh-analytics-kpi">
+                            <div class="sh-analytics-kpi-top">
+                                <span>Average Order Value</span>
+                                <span class="sh-analytics-kpi-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                            </div>
+                            <strong id="sh-analytics-aov">₹0</strong>
+                            <div class="sh-analytics-kpi-bottom">
+                                <span class="sh-analytics-change" id="sh-analytics-aov-change"><i
+                                        class="bi bi-arrow-up-right"></i> +0%</span>
+                                <span>vs previous period</span>
+                            </div>
+                        </article>
+                        <article class="sh-analytics-kpi">
+                            <div class="sh-analytics-kpi-top">
+                                <span>Units Sold</span>
+                                <span class="sh-analytics-kpi-icon"><i class="bi bi-box-seam"></i></span>
+                            </div>
+                            <strong id="sh-analytics-units">0</strong>
+                            <div class="sh-analytics-kpi-bottom">
+                                <span class="sh-analytics-change" id="sh-analytics-units-change"><i
+                                        class="bi bi-arrow-up-right"></i> +0%</span>
+                                <span>vs previous period</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!--- Revenue And Orders Charts --->
+                    <div class="sh-analytics-primary-grid">
+                        <article class="sh-analytics-card sh-analytics-revenue-card">
+                            <div class="sh-analytics-card-heading">
+                                <div>
+                                    <h3>Revenue Overview</h3>
+                                    <p>Revenue and orders over time</p>
+                                </div>
+                                <span class="sh-analytics-live-label"><span></span> Demo data</span>
+                            </div>
+                            <div class="sh-analytics-chart sh-analytics-revenue-chart">
+                                <canvas id="sh-analytics-revenue-chart" aria-label="Revenue and orders chart"
+                                    role="img"></canvas>
+                            </div>
+                            <div class="sh-analytics-chart-legend">
+                                <span><i class="sh-analytics-legend-revenue"></i> Revenue</span>
+                                <span><i class="sh-analytics-legend-orders"></i> Orders</span>
+                            </div>
+                        </article>
+
+                        <article class="sh-analytics-card sh-analytics-category-card">
+                            <div class="sh-analytics-card-heading">
+                                <div>
+                                    <h3>Sales by Category</h3>
+                                    <p>Revenue distribution</p>
+                                </div>
+                         
+                            </div>
+                            <div class="sh-analytics-chart sh-analytics-doughnut-chart">
+                                <canvas id="sh-analytics-category-chart" aria-label="Sales by category chart"
+                                    role="img"></canvas>
+                            </div>
+                            <div class="sh-analytics-category-legend" id="sh-analytics-category-legend"></div>
+                        </article>
+                    </div>
+
+                    <!--- Sales And Inventory --->
+                    <div class="sh-analytics-secondary-grid">
+                        <article class="sh-analytics-card">
+                            <div class="sh-analytics-card-heading">
+                                <div>
+                                    <h3>Sales Performance</h3>
+                                    <p>Daily order volume</p>
+                                </div>
+                                <span class="sh-analytics-heading-icon"><i class="bi bi-bar-chart-line"></i></span>
+                            </div>
+                            <div class="sh-analytics-chart sh-analytics-sales-chart">
+                                <canvas id="sh-analytics-sales-chart" aria-label="Daily sales performance chart"
+                                    role="img"></canvas>
+                            </div>
+                        </article>
+
+                        <article class="sh-analytics-card sh-analytics-inventory-card">
+                            <div class="sh-analytics-card-heading">
+                                <div>
+                                    <h3>Inventory Health</h3>
+                                    <p>Current product stock status</p>
+                                </div>
+                                <span class="sh-analytics-heading-icon"><i class="bi bi-boxes"></i></span>
+                            </div>
+                            <div class="sh-analytics-stock-summary">
+                                <div class="sh-analytics-stock-total">
+                                    <span>Total products</span>
+                                    <strong id="sh-analytics-stock-total">0</strong>
+                                </div>
+                                <span class="sh-analytics-stock-caption">Based on available product inventory</span>
+                            </div>
+                            <div class="sh-analytics-stock-bar" aria-label="Inventory distribution">
+                                <span class="sh-analytics-stock-in" id="sh-analytics-stock-bar-in"></span>
+                                <span class="sh-analytics-stock-low" id="sh-analytics-stock-bar-low"></span>
+                                <span class="sh-analytics-stock-out" id="sh-analytics-stock-bar-out"></span>
+                            </div>
+                            <div class="sh-analytics-stock-list">
+                                <div><span><i class="sh-analytics-stock-dot-in"></i> In stock</span><strong
+                                        id="sh-analytics-stock-in">0</strong></div>
+                                <div><span><i class="sh-analytics-stock-dot-low"></i> Low stock</span><strong
+                                        id="sh-analytics-stock-low">0</strong></div>
+                                <div><span><i class="sh-analytics-stock-dot-out"></i> Out of stock</span><strong
+                                        id="sh-analytics-stock-out">0</strong></div>
+                            </div>
+                            <a href="404.html" class="sh-analytics-inventory-link">Manage products <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </article>
+                    </div>
+
+                    <!--- Top Selling Products --->
+                    <article class="sh-analytics-card sh-analytics-top-products">
+                        <div class="sh-analytics-card-heading">
+                            <div>
+                                <h3>Top Performing Products</h3>
+                                <p>Products ranked by demo sales volume</p>
+                            </div>
+                            <a href="404.html" class="sh-analytics-view-all">View inventory <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                        <div class="sh-analytics-table-wrap">
+                            <table class="sh-analytics-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Units Sold</th>
+                                        <th scope="col">Revenue</th>
+                                        <th scope="col">Performance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="sh-analytics-products-body"></tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <!--- Recent Activity --->
+                    <article class="sh-analytics-card sh-analytics-activity-card">
+                        <div class="sh-analytics-card-heading">
+                            <div>
+                                <h3>Recent Activity</h3>
+                                <p>Latest demo workspace events</p>
+                            </div>
+                            <span class="sh-analytics-activity-badge">Activity feed</span>
+                        </div>
+                        <div class="sh-analytics-activity-list" id="sh-analytics-activity-list"></div>
+                    </article>
+
+                    <p class="sh-analytics-disclaimer"><i class="bi bi-info-circle"></i> Analytics shown are
+                        illustrative demo data and are not actual sales or customer transactions.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-analytics.js"></script>
+</body>
+
+</html>

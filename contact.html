@@ -1,0 +1,603 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Smart Home IoT Platform</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div class="sh-ldr-main" id="sh-ldr-main" role="status" aria-label="Loading Stackly">
+        <!--- Loader Background --->
+        <div class="sh-ldr-grid"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-one"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-two"></div>
+        <div class="sh-ldr-particles" id="sh-ldr-particles"></div>
+        <!--- Loader Content --->
+        <div class="sh-ldr-content">
+            <!--- Animated Smart Home Icon --->
+            <div class="sh-ldr-visual">
+                <div class="sh-ldr-orbit sh-ldr-orbit-one"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-two"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-three"></div>
+                <div class="sh-ldr-icon-wrap">
+                    <i class="bi bi-house-gear sh-ldr-house-icon"></i>
+                    <span class="sh-ldr-icon-dot"></span>
+                </div>
+                <span class="sh-ldr-signal sh-ldr-signal-one"></span>
+                <span class="sh-ldr-signal sh-ldr-signal-two"></span>
+            </div>
+            <!--- Brand --->
+            <a href="index.html" class="sh-ldr-brand" aria-label="Stackly home">stackly<span>.</span></a>
+            <p class="sh-ldr-tagline">INTELLIGENT LIVING</p>
+            <!--- Loading Message --->
+            <div class="sh-ldr-message-wrap">
+                <span class="sh-ldr-status-dot"></span>
+                <p class="sh-ldr-message" id="sh-ldr-message">Connecting your smart experience...</p>
+            </div>
+            <!--- Decorative Signal --->
+            <div class="sh-ldr-signal-line"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <!--- Loader Footer --->
+        <div class="sh-ldr-footer">
+            <span>SMARTER SPACES. SIMPLER LIVING.</span>
+            <span class="sh-ldr-footer-status"><i class="bi bi-shield-check"></i> SYSTEM INITIALIZING</span>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- Navbar Component --->
+    <div id="sh-navbar-component"></div>
+
+    <!--- Page Hero Container --->
+    <div id="sh-page-hero-component" data-page="contact"></div>
+
+    <!--- Contact Information Section Start --->
+    <section class="sh-con-info" id="sh-con-info">
+        <div class="container">
+            <div class="sh-con-info-heading">
+                <div class="sh-con-info-heading-content">
+                    <span class="sh-con-info-eyebrow"><span></span> GET IN TOUCH</span>
+                    <h2>We're Here to <span>Help You Connect.</span></h2>
+                    <p>Have a question about smart living? Our team is ready to help you explore connected solutions and
+                        find the right support.</p>
+                </div>
+                <div class="sh-con-info-heading-status">
+                    <span class="sh-con-info-status-dot"></span>
+                    <span>HERE TO HELP</span>
+                </div>
+            </div>
+            <div class="sh-con-info-grid">
+                <!--- Email Card --->
+                <a href="mailto:info@stackly.com" class="sh-con-info-card sh-con-info-card-email">
+                    <div class="sh-con-info-card-top">
+                        <span class="sh-con-info-icon"><i class="bi bi-envelope-at"></i></span>
+                        <span class="sh-con-info-card-number">01 / EMAIL</span>
+                    </div>
+                    <div class="sh-con-info-card-content">
+                        <h3>Email Us</h3>
+                        <p>For product questions, general enquiries, or collaboration opportunities.</p>
+                        <span class="sh-con-info-detail">info@stackly.com</span>
+                    </div>
+                    <div class="sh-con-info-card-bottom">
+                        <span>Send us a message</span>
+                        <span class="sh-con-info-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                    </div>
+                    <span class="sh-con-info-card-glow"></span>
+                </a>
+                <!--- Phone Card --->
+                <a href="tel:+919876543210" class="sh-con-info-card sh-con-info-card-phone">
+                    <div class="sh-con-info-card-top">
+                        <span class="sh-con-info-icon"><i class="bi bi-headset"></i></span>
+                        <span class="sh-con-info-card-number">02 / PHONE</span>
+                    </div>
+                    <div class="sh-con-info-card-content">
+                        <h3>Call Our Team</h3>
+                        <p>Speak with our team about product enquiries and assistance.</p>
+                        <span class="sh-con-info-detail">+91 98765 43210</span>
+                    </div>
+                    <div class="sh-con-info-card-bottom">
+                        <span>Give us a call</span>
+                        <span class="sh-con-info-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                    </div>
+                    <span class="sh-con-info-card-glow"></span>
+                </a>
+                <!--- Location Card --->
+                <a href="https://maps.google.com/?q=Salem,Tamil+Nadu,India" target="_blank" rel="noopener noreferrer"
+                    class="sh-con-info-card sh-con-info-card-location">
+                    <div class="sh-con-info-card-top">
+                        <span class="sh-con-info-icon"><i class="bi bi-geo-alt"></i></span>
+                        <span class="sh-con-info-card-number">03 / LOCATION</span>
+                    </div>
+                    <div class="sh-con-info-card-content">
+                        <h3>Find Our Office</h3>
+                        <p>Planning to visit? Check the map for our location and directions.</p>
+                        <span class="sh-con-info-detail">Salem, Tamil Nadu, India</span>
+                    </div>
+                    <div class="sh-con-info-card-bottom">
+                        <span>Explore the location</span>
+                        <span class="sh-con-info-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                    </div>
+                    <span class="sh-con-info-card-glow"></span>
+                </a>
+                <!--- Support Hours Card --->
+                <div class="sh-con-info-card sh-con-info-card-hours">
+                    <div class="sh-con-info-card-top">
+                        <span class="sh-con-info-icon"><i class="bi bi-clock-history"></i></span>
+                        <span class="sh-con-info-card-number">04 / SUPPORT</span>
+                    </div>
+                    <div class="sh-con-info-card-content">
+                        <h3>Support Hours</h3>
+                        <p>Our usual availability for general enquiries and assistance.</p>
+                        <span class="sh-con-info-detail">Monday – Friday</span>
+                        <span class="sh-con-info-hours">9:00 AM – 6:00 PM IST</span>
+                    </div>
+                    <div class="sh-con-info-card-bottom">
+                        <span>We're ready to assist</span>
+                        <span class="sh-con-info-arrow"><i class="bi bi-check2"></i></span>
+                    </div>
+                    <span class="sh-con-info-card-glow"></span>
+                </div>
+            </div>
+            <!--- Contact Information Footer Note --->
+            <div class="sh-con-info-note">
+                <span class="sh-con-info-note-icon"><i class="bi bi-shield-check"></i></span>
+                <p><strong>Your privacy matters.</strong> Your enquiries should be handled with care. Contact details
+                    submitted through the website should only be used for the purposes explained in your privacy policy.
+                </p>
+                <a href="404.html">Contact us <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- Contact Information Section End --->
+
+    <!--- Contact Form Section Start --->
+    <section class="sh-con-form" id="sh-con-form">
+        <div class="container">
+            <div class="sh-con-form-layout">
+                <!--- Form Introduction --->
+                <div class="sh-con-form-intro">
+                    <span class="sh-con-form-eyebrow"><span></span> LET'S TALK SMARTER</span>
+                    <h2>Have a Question? <span>Let's Connect.</span></h2>
+                    <p>Tell us what you need. Whether you're exploring smart home solutions or need assistance, we're
+                        ready to hear from you.</p>
+                    <div class="sh-con-form-intro-visual">
+                        <div class="sh-con-form-visual-orbit sh-con-form-visual-orbit-one"></div>
+                        <div class="sh-con-form-visual-orbit sh-con-form-visual-orbit-two"></div>
+                        <div class="sh-con-form-visual-core"><i class="bi bi-house-gear"></i><span></span></div>
+                        <span class="sh-con-form-visual-node sh-con-form-node-one"><i
+                                class="bi bi-lightbulb"></i></span>
+                        <span class="sh-con-form-visual-node sh-con-form-node-two"><i
+                                class="bi bi-shield-check"></i></span>
+                        <span class="sh-con-form-visual-node sh-con-form-node-three"><i
+                                class="bi bi-thermometer-half"></i></span>
+                        <span class="sh-con-form-visual-node sh-con-form-node-four"><i class="bi bi-wifi"></i></span>
+                    </div>
+                    <div class="sh-con-form-promise">
+                        <span class="sh-con-form-promise-icon"><i class="bi bi-chat-square-text"></i></span>
+                        <div><strong>Every conversation matters.</strong><span>Share your questions with our
+                                team.</span></div>
+                    </div>
+                </div>
+                <!--- Contact Form --->
+                <div class="sh-con-form-panel">
+                    <div class="sh-con-form-panel-heading">
+                        <div><span class="sh-con-form-panel-label">CONTACT OUR TEAM</span>
+                            <h3>Send us a message</h3>
+                        </div>
+                        <span class="sh-con-form-required">* Required fields</span>
+                    </div>
+                    <form id="sh-con-form-main" class="sh-con-form-fields">
+                        <div class="sh-con-form-row">
+                            <div class="sh-con-form-group">
+                                <label for="sh-con-form-name">Full Name <span>*</span></label>
+                                <div class="sh-con-form-input-wrap"><i class="bi bi-person"></i><input type="text"
+                                        id="sh-con-form-name" name="name" placeholder="Enter your full name"
+                                        autocomplete="name" required pattern="[A-Za-z ]+"
+                                        title="Enter letters and spaces only."></div>
+                            </div>
+                            <div class="sh-con-form-group">
+                                <label for="sh-con-form-email">Email Address <span>*</span></label>
+                                <div class="sh-con-form-input-wrap"><i class="bi bi-envelope"></i><input type="email"
+                                        id="sh-con-form-email" name="email" placeholder="you@example.com"
+                                        autocomplete="email" required></div>
+                            </div>
+                        </div>
+                        <div class="sh-con-form-row">
+                            <div class="sh-con-form-group">
+                                <label for="sh-con-form-phone">Phone Number <span>*</span></label>
+                                <div class="sh-con-form-input-wrap"><i class="bi bi-telephone"></i><span
+                                        class="sh-con-form-country-code">+91</span><input type="tel"
+                                        id="sh-con-form-phone" name="phone" placeholder="10-digit mobile number"
+                                        inputmode="numeric" autocomplete="tel-national" minlength="10" maxlength="10"
+                                        pattern="[0-9]{10}" title="Enter exactly 10 digits." required></div>
+                            </div>
+                            <div class="sh-con-form-group">
+                                <label for="sh-con-form-type">Enquiry Type <span>*</span></label>
+                                <div class="sh-con-form-input-wrap sh-con-form-select-wrap"><i
+                                        class="bi bi-grid"></i><select id="sh-con-form-type" name="enquiry_type"
+                                        required>
+                                        <option value="" selected disabled>Select enquiry type</option>
+                                        <option value="Product Enquiry">Product Enquiry</option>
+                                        <option value="Smart Home Consultation">Smart Home Consultation</option>
+                                        <option value="Technical Support">Technical Support</option>
+                                        <option value="Partnership">Partnership</option>
+                                        <option value="General Enquiry">General Enquiry</option>
+                                    </select><i class="bi bi-chevron-down sh-con-form-select-arrow"></i></div>
+                            </div>
+                        </div>
+                        <div class="sh-con-form-group">
+                            <label for="sh-con-form-subject">Subject <span>*</span></label>
+                            <div class="sh-con-form-input-wrap"><i class="bi bi-pencil-square"></i><input type="text"
+                                    id="sh-con-form-subject" name="subject"
+                                    placeholder="What would you like to discuss?" required maxlength="120"></div>
+                        </div>
+                        <div class="sh-con-form-group">
+                            <label for="sh-con-form-message">Your Message <span>*</span></label>
+                            <div class="sh-con-form-input-wrap sh-con-form-textarea-wrap"><i
+                                    class="bi bi-chat-left-text"></i><textarea id="sh-con-form-message" name="message"
+                                    rows="5" placeholder="Tell us how we can help you..." required
+                                    maxlength="2000"></textarea></div>
+                            <span class="sh-con-form-hint">Please provide enough detail to help us understand your
+                                enquiry.</span>
+                        </div>
+                        <div class="sh-con-form-submit-row">
+                            <button type="submit" class="sh-con-form-submit"><span>Send Message</span><i
+                                    class="bi bi-arrow-up-right"></i></button>
+                            <span class="sh-con-form-secure"><i class="bi bi-shield-lock"></i> Your information stays
+                                private.</span>
+                        </div>
+                        <p class="sh-con-form-disclaimer">By submitting this form, you agree to be contacted about your
+                            enquiry.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Contact Form Success Popup --->
+    <div class="sh-con-form-modal" id="sh-con-form-modal" aria-hidden="true">
+        <div class="sh-con-form-modal-backdrop" data-close-modal></div>
+        <div class="sh-con-form-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="sh-con-form-modal-title"
+            aria-describedby="sh-con-form-modal-description" tabindex="-1">
+            <button type="button" class="sh-con-form-modal-close" data-close-modal aria-label="Close popup"><i
+                    class="bi bi-x-lg"></i></button>
+            <div class="sh-con-form-modal-visual"><span class="sh-con-form-modal-ring"></span><span
+                    class="sh-con-form-modal-check"><i class="bi bi-check-lg"></i></span></div>
+            <span class="sh-con-form-modal-eyebrow">MESSAGE STATUS</span>
+            <h3 id="sh-con-form-modal-title">Message Sent Successfully!</h3>
+            <p id="sh-con-form-modal-description">Thank you for contacting Stackly. Your message has been submitted
+                successfully.</p>
+            <button type="button" class="sh-con-form-modal-done" id="sh-con-form-modal-done">Continue <i
+                    class="bi bi-arrow-right"></i></button>
+        </div>
+    </div>
+    <!--- Contact Form Section End --->
+
+    <!--- Contact FAQ Section Start --->
+    <section class="sh-con-faq" id="sh-con-faq">
+        <div class="container">
+            <!--- FAQ Heading --->
+            <div class="sh-con-faq-heading">
+                <div class="sh-con-faq-heading-content">
+                    <span class="sh-con-faq-eyebrow"><span></span> FREQUENTLY ASKED QUESTIONS</span>
+                    <h2>Questions? We've Got <span>Answers.</span></h2>
+                    <p>Find quick answers about our smart home solutions, product enquiries, compatibility, and support.
+                    </p>
+                </div>
+                <div class="sh-con-faq-heading-icon"><i class="bi bi-chat-square-text"></i><span>FAQ</span></div>
+            </div>
+            <div class="sh-con-faq-layout">
+                <!--- FAQ Sidebar --->
+                <aside class="sh-con-faq-sidebar">
+                    <div class="sh-con-faq-sidebar-top">
+                        <span class="sh-con-faq-sidebar-icon"><i class="bi bi-lightbulb"></i></span>
+                        <span class="sh-con-faq-sidebar-label">NEED A HAND?</span>
+                    </div>
+                    <h3>Still looking for an answer?</h3>
+                    <p>Our team can help you find the right information for your smart home questions.</p>
+                    <a href="404.html" class="sh-con-faq-contact-link">Contact Our Team <i
+                            class="bi bi-arrow-up-right"></i></a>
+                    <div class="sh-con-faq-sidebar-divider"></div>
+                    <div class="sh-con-faq-sidebar-note"><i class="bi bi-shield-check"></i><span>We're here to help you
+                            make smarter choices.</span></div>
+                    <div class="sh-con-faq-sidebar-decoration"><i class="bi bi-house-gear"></i></div>
+                </aside>
+                <!--- FAQ Questions --->
+                <div class="sh-con-faq-content">
+                    <div class="sh-con-faq-category"><i class="bi bi-house-gear"></i><span>SMART HOME BASICS</span>
+                    </div>
+                    <div class="sh-con-faq-list" id="sh-con-faq-list">
+                        <!--- FAQ Item 1 --->
+                        <article class="sh-con-faq-item is-active">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-1"
+                                aria-expanded="true" aria-controls="sh-con-faq-answer-1">
+                                <span class="sh-con-faq-question-number">01</span>
+                                <span class="sh-con-faq-question-text">What is a smart home system?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-1" role="region"
+                                aria-labelledby="sh-con-faq-question-1">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>A smart home uses connected devices and automation to help manage features such
+                                        as lighting, climate, and security. The available functions depend on the
+                                        devices and platform you choose.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <!--- FAQ Item 2 --->
+                        <article class="sh-con-faq-item">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-2"
+                                aria-expanded="false" aria-controls="sh-con-faq-answer-2">
+                                <span class="sh-con-faq-question-number">02</span>
+                                <span class="sh-con-faq-question-text">Which smart home products can I explore?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-2" role="region"
+                                aria-labelledby="sh-con-faq-question-2">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>You can explore product categories such as smart lighting, security devices,
+                                        climate controls, sensors, and automation solutions. Check each product's
+                                        specifications before choosing a device.</p><a href="products.html">Explore
+                                        Products <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                        <!--- FAQ Item 3 --->
+                        <article class="sh-con-faq-item">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-3"
+                                aria-expanded="false" aria-controls="sh-con-faq-answer-3">
+                                <span class="sh-con-faq-question-number">03</span>
+                                <span class="sh-con-faq-question-text">Will smart devices work with my existing home
+                                    setup?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-3" role="region"
+                                aria-labelledby="sh-con-faq-question-3">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>Compatibility depends on your existing devices, communication protocols, network,
+                                        and any required hub. Review the manufacturer's specifications or contact us
+                                        before purchasing.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <!--- FAQ Item 4 --->
+                        <article class="sh-con-faq-item">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-4"
+                                aria-expanded="false" aria-controls="sh-con-faq-answer-4">
+                                <span class="sh-con-faq-question-number">04</span>
+                                <span class="sh-con-faq-question-text">Do I need an internet connection for smart
+                                    devices?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-4" role="region"
+                                aria-labelledby="sh-con-faq-question-4">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>Requirements vary by device. Some local functions may work without internet,
+                                        while remote access, cloud features, or voice assistants may require an internet
+                                        connection.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <!--- FAQ Category --->
+                        <div class="sh-con-faq-category sh-con-faq-category-support"><i
+                                class="bi bi-headset"></i><span>ENQUIRIES & SUPPORT</span></div>
+                        <!--- FAQ Item 5 --->
+                        <article class="sh-con-faq-item">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-5"
+                                aria-expanded="false" aria-controls="sh-con-faq-answer-5">
+                                <span class="sh-con-faq-question-number">05</span>
+                                <span class="sh-con-faq-question-text">How can I enquire about a product?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-5" role="region"
+                                aria-labelledby="sh-con-faq-question-5">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>Visit our Products page to explore the available categories, then use the Contact
+                                        form to tell us which product you're interested in and what you would like to
+                                        know.</p><a href="404.html">Browse Products <i
+                                            class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                        <!--- FAQ Item 6 --->
+                        <article class="sh-con-faq-item">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-6"
+                                aria-expanded="false" aria-controls="sh-con-faq-answer-6">
+                                <span class="sh-con-faq-question-number">06</span>
+                                <span class="sh-con-faq-question-text">How do I request technical assistance?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-6" role="region"
+                                aria-labelledby="sh-con-faq-question-6">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>Submit an enquiry using the Contact form and select “Technical Support.” Describe
+                                        the issue and include the relevant product details so the team can understand
+                                        your request.</p><a href="404.html">Request Assistance <i
+                                            class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                        <!--- FAQ Item 7 --->
+                        <article class="sh-con-faq-item">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-7"
+                                aria-expanded="false" aria-controls="sh-con-faq-answer-7">
+                                <span class="sh-con-faq-question-number">07</span>
+                                <span class="sh-con-faq-question-text">How can I discuss a partnership?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-7" role="region"
+                                aria-labelledby="sh-con-faq-question-7">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>Select “Partnership” in our enquiry form and share a short introduction to your
+                                        organisation, your proposal, and how you would like to collaborate.</p><a
+                                        href="404.html">Discuss a Partnership <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                        <!--- FAQ Item 8 --->
+                        <article class="sh-con-faq-item">
+                            <button type="button" class="sh-con-faq-question" id="sh-con-faq-question-8"
+                                aria-expanded="false" aria-controls="sh-con-faq-answer-8">
+                                <span class="sh-con-faq-question-number">08</span>
+                                <span class="sh-con-faq-question-text">How do I contact Stackly if my question isn't
+                                    listed?</span>
+                                <span class="sh-con-faq-toggle"><i class="bi bi-plus-lg"></i></span>
+                            </button>
+                            <div class="sh-con-faq-answer" id="sh-con-faq-answer-8" role="region"
+                                aria-labelledby="sh-con-faq-question-8">
+                                <div class="sh-con-faq-answer-inner">
+                                    <p>Use the contact form to send your question and select “General Enquiry.” Include
+                                        the relevant details so your request can be directed appropriately.</p><a
+                                        href="404.html">Send Your Question <i class="bi bi-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!--- FAQ Bottom Note --->
+                    <div class="sh-con-faq-bottom"><span><i class="bi bi-info-circle"></i> Still unsure? We're happy to
+                            help.</span><a href="404.html">Talk to our team <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Contact FAQ Section End --->
+
+    <!--- Map Section Start --->
+    <section class="sh-con-map" id="sh-con-map">
+        <div class="container">
+            <!--- Map Section Heading --->
+            <div class="sh-con-map-heading">
+                <div class="sh-con-map-heading-content">
+                    <span class="sh-con-map-eyebrow"><span></span> FIND OUR LOCATION</span>
+                    <h2>Let's Find <span>Our Way.</span></h2>
+                    <p>Planning to visit? Explore our location in Salem, Tamil Nadu, and get directions through Google
+                        Maps.</p>
+                </div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=MMR+Complex+Chinna+Thirupathi+Salem+Tamil+Nadu+636008"
+                    target="_blank" rel="noopener noreferrer" class="sh-con-map-directions">
+                    <span class="sh-con-map-directions-icon"><i class="bi bi-sign-turn-right"></i></span>
+                    <span><strong>Get Directions</strong><small>Open in Google Maps</small></span>
+                    <i class="bi bi-arrow-up-right sh-con-map-directions-arrow"></i>
+                </a>
+            </div>
+            <!--- Interactive Map --->
+            <div class="sh-con-map-frame">
+                <div class="sh-con-map-topbar">
+                    <div class="sh-con-map-topbar-brand"><span class="sh-con-map-brand-icon"><i
+                                class="bi bi-geo-alt-fill"></i></span>
+                        <div><strong>STACKLY LOCATION</strong><span>Chinna Thirupathi, Salem</span></div>
+                    </div>
+                    <span class="sh-con-map-live"><span></span> LOCATION DETAILS</span>
+                </div>
+                <div class="sh-con-map-embed">
+                    <iframe
+                        src="https://maps.google.com/maps?q=MMR%20Complex%2C%20Chinna%20Thirupathi%2C%20Salem%2C%20Tamil%20Nadu%20636008&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        title="Map showing MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                    </iframe>
+                    <!--<div class="sh-con-map-overlay-label"><span class="sh-con-map-overlay-pin"><i
+                                class="bi bi-geo-alt-fill"></i></span>
+                        <div><strong>MMR Complex</strong><span>Chinna Thirupathi, Salem</span></div>
+                    </div>-->
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=MMR+Complex+Chinna+Thirupathi+Salem+Tamil+Nadu+636008"
+                        target="_blank" rel="noopener noreferrer" class="sh-con-map-open"
+                        aria-label="Open location in Google Maps"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+                <div class="sh-con-map-bottom">
+                    <div class="sh-con-map-address-icon"><i class="bi bi-pin-map"></i></div>
+                    <div class="sh-con-map-address"><strong>MMR Complex, Chinna Thirupathi</strong><span>Salem, Tamil
+                            Nadu 636008, India</span></div>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=MMR+Complex+Chinna+Thirupathi+Salem+Tamil+Nadu+636008"
+                        target="_blank" rel="noopener noreferrer" class="sh-con-map-bottom-link">Navigate <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <!--- Location Information --->
+            <div class="sh-con-map-info">
+                <div class="sh-con-map-info-item"><span class="sh-con-map-info-icon"><i
+                            class="bi bi-geo-alt"></i></span>
+                    <div><strong>Our Location</strong>
+                        <p>MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+                    </div>
+                </div>
+                <div class="sh-con-map-info-item"><span class="sh-con-map-info-icon"><i
+                            class="bi bi-signpost-2"></i></span>
+                    <div><strong>Easy Navigation</strong>
+                        <p>Use Google Maps to view the route and plan your journey.</p>
+                    </div>
+                </div>
+                <div class="sh-con-map-info-item"><span class="sh-con-map-info-icon"><i
+                            class="bi bi-chat-square-text"></i></span>
+                    <div><strong>Need Help?</strong>
+                        <p>Contact our team if you need assistance before your visit.</p><a href="404.html">Contact
+                            Us <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Map Section End --->
+
+    <!--- Section Start --->
+    <!--- Section End --->
+
+    <!--- Footer Component --->
+    <div id="sh-footer-component"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/all-hero.js"></script>
+</body>
+
+</html>

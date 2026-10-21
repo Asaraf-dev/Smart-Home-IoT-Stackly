@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b0a">
+    <title>Login | Stackly Smart Living</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+    <!--- Login Page Start --->
+    <main class="sh-auth-login">
+        <a href="index.html" class="sh-auth-login-home"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        <div class="sh-auth-login-shell">
+            <!--- Login Visual --->
+            <section class="sh-auth-login-visual">
+                <a href="index.html" class="sh-auth-login-brand"><span class="sh-auth-login-brand-icon"><i class="bi bi-house-gear"></i></span><span>stackly<span>.</span></span></a>
+                <div class="sh-auth-login-visual-content">
+                    <span class="sh-auth-login-eyebrow"><span></span> INTELLIGENT LIVING</span>
+                    <h1>Your home.<br>Your world.<br><span>Your control.</span></h1>
+                    <p>Step into a smarter living experience designed around your comfort, security, and everyday life.</p>
+                    <div class="sh-auth-login-visual-art">
+                        <div class="sh-auth-login-art-orbit sh-auth-login-art-orbit-one"></div>
+                        <div class="sh-auth-login-art-orbit sh-auth-login-art-orbit-two"></div>
+                        <div class="sh-auth-login-art-orbit sh-auth-login-art-orbit-three"></div>
+                        <div class="sh-auth-login-art-house"><i class="bi bi-house-gear"></i><span></span></div>
+                        <div class="sh-auth-login-art-node sh-auth-login-art-node-one"><i class="bi bi-lightbulb"></i></div>
+                        <div class="sh-auth-login-art-node sh-auth-login-art-node-two"><i class="bi bi-shield-check"></i></div>
+                        <div class="sh-auth-login-art-node sh-auth-login-art-node-three"><i class="bi bi-thermometer-half"></i></div>
+                        <div class="sh-auth-login-art-node sh-auth-login-art-node-four"><i class="bi bi-wifi"></i></div>
+                    </div>
+                </div>
+                <div class="sh-auth-login-visual-footer"><span><i class="bi bi-shield-check"></i> SMARTER SPACES. SIMPLER LIVING.</span><span>STACKLY © <span id="sh-auth-login-year"></span></span></div>
+            </section>
+            <!--- Login Form Panel --->
+            <section class="sh-auth-login-panel">
+                <div class="sh-auth-login-mobile-brand"><a href="index.html" class="sh-auth-login-brand"><span class="sh-auth-login-brand-icon"><i class="bi bi-house-gear"></i></span><span>stackly<span>.</span></span></a></div>
+                <div class="sh-auth-login-form-wrap">
+                    <div class="sh-auth-login-heading">
+                        <span class="sh-auth-login-form-eyebrow">WELCOME BACK</span>
+                        <h2>Sign in to <span>Stackly.</span></h2>
+                        <p>Enter your details to access your account.</p>
+                    </div>
+                    <form id="sh-auth-login-form" class="sh-auth-login-form">
+                        <!--- Account Type --->
+                        <fieldset class="sh-auth-login-role-field">
+                            <legend>Choose account type <span>*</span></legend>
+                            <div class="sh-auth-login-role-options">
+                                <label class="sh-auth-login-role-card is-selected" for="sh-auth-login-admin">
+                                    <input type="radio" name="account_type" id="sh-auth-login-admin" value="admin" checked required>
+                                    <span class="sh-auth-login-role-icon"><i class="bi bi-shield-lock"></i></span>
+                                    <span class="sh-auth-login-role-copy"><strong>Admin</strong><small>Manage platform</small></span>
+                                    <span class="sh-auth-login-role-check"><i class="bi bi-check-lg"></i></span>
+                                </label>
+                                <label class="sh-auth-login-role-card" for="sh-auth-login-client">
+                                    <input type="radio" name="account_type" id="sh-auth-login-client" value="client" required>
+                                    <span class="sh-auth-login-role-icon"><i class="bi bi-person"></i></span>
+                                    <span class="sh-auth-login-role-copy"><strong>Client</strong><small>Your dashboard</small></span>
+                                    <span class="sh-auth-login-role-check"><i class="bi bi-check-lg"></i></span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <!--- Email Field --->
+                        <div class="sh-auth-login-group">
+                            <label for="sh-auth-login-email">Email Address <span>*</span></label>
+                            <div class="sh-auth-login-input-wrap"><i class="bi bi-envelope sh-auth-login-input-icon"></i><input type="email" id="sh-auth-login-email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+                        </div>
+                        <!--- Password Field --->
+                        <div class="sh-auth-login-group">
+                            <label for="sh-auth-login-password">Password <span>*</span></label>
+                            <div class="sh-auth-login-input-wrap"><i class="bi bi-lock sh-auth-login-input-icon"></i><input type="password" id="sh-auth-login-password" name="password" placeholder="Enter your password" autocomplete="current-password" required><button type="button" class="sh-auth-login-password-toggle" id="sh-auth-login-password-toggle" aria-label="Show password" aria-pressed="false"><i class="bi bi-eye"></i></button></div>
+                        </div>
+                        <!--- Remember Me and Forgot Password --->
+                        <div class="sh-auth-login-options">
+                            <label class="sh-auth-login-remember"><input type="checkbox" id="sh-auth-login-remember" name="remember"><span class="sh-auth-login-custom-check"><i class="bi bi-check-lg"></i></span><span>Remember me</span></label>
+                            <a href="404.html" class="sh-auth-login-forgot">Forgot password?</a>
+                        </div>
+                        <!--- Login Button --->
+                        <button type="submit" class="sh-auth-login-submit"><span>Login to Account</span><i class="bi bi-arrow-up-right"></i></button>
+                        <div class="sh-auth-login-divider"><span>SECURE ACCESS</span></div>
+                        <p class="sh-auth-login-signup">Don't have an account? <a href="register.html">Sign Up <i class="bi bi-arrow-up-right"></i></a></p>
+                    </form>
+                    <p class="sh-auth-login-privacy"><i class="bi bi-shield-check"></i> Your smart living journey starts here.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!--- Login Page End --->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

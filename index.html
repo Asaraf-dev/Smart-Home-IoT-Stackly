@@ -1,0 +1,685 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Smart Home IoT Platform</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="sh-ldr-main" id="sh-ldr-main" role="status" aria-label="Loading Stackly">
+    <!--- Loader Background --->
+    <div class="sh-ldr-grid"></div>
+    <div class="sh-ldr-glow sh-ldr-glow-one"></div>
+    <div class="sh-ldr-glow sh-ldr-glow-two"></div>
+    <div class="sh-ldr-particles" id="sh-ldr-particles"></div>
+    <!--- Loader Content --->
+    <div class="sh-ldr-content">
+      <!--- Animated Smart Home Icon --->
+      <div class="sh-ldr-visual">
+        <div class="sh-ldr-orbit sh-ldr-orbit-one"></div>
+        <div class="sh-ldr-orbit sh-ldr-orbit-two"></div>
+        <div class="sh-ldr-orbit sh-ldr-orbit-three"></div>
+        <div class="sh-ldr-icon-wrap">
+          <i class="bi bi-house-gear sh-ldr-house-icon"></i>
+          <span class="sh-ldr-icon-dot"></span>
+        </div>
+        <span class="sh-ldr-signal sh-ldr-signal-one"></span>
+        <span class="sh-ldr-signal sh-ldr-signal-two"></span>
+      </div>
+      <!--- Brand --->
+      <a href="index.html" class="sh-ldr-brand" aria-label="Stackly home">stackly<span>.</span></a>
+      <p class="sh-ldr-tagline">INTELLIGENT LIVING</p>
+      <!--- Loading Message --->
+      <div class="sh-ldr-message-wrap">
+        <span class="sh-ldr-status-dot"></span>
+        <p class="sh-ldr-message" id="sh-ldr-message">Connecting your smart experience...</p>
+      </div>
+      <!--- Decorative Signal --->
+      <div class="sh-ldr-signal-line"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <!--- Loader Footer --->
+    <div class="sh-ldr-footer">
+      <span>SMARTER SPACES. SIMPLER LIVING.</span>
+      <span class="sh-ldr-footer-status"><i class="bi bi-shield-check"></i> SYSTEM INITIALIZING</span>
+    </div>
+  </div>
+  <!--- Loader End --->
+
+
+  <!--- Navbar Component --->
+  <div id="sh-navbar-component"></div>
+
+  <!--- Hero Section Start --->
+  <section class="sh-ind-hero" id="sh-ind-hero">
+    <div class="sh-ind-hero-bg-grid"></div>
+    <div class="sh-ind-hero-glow sh-ind-hero-glow-one"></div>
+    <div class="sh-ind-hero-glow sh-ind-hero-glow-two"></div>
+    <div class="container sh-ind-hero-container">
+      <div class="row align-items-center sh-ind-hero-row">
+        <!--- Hero Content --->
+        <div class="col-lg-6 sh-ind-hero-content">
+          <div class="sh-ind-hero-eyebrow">
+            <span class="sh-ind-hero-eyebrow-dot"></span>
+            <span>THE NEXT ERA OF SMART LIVING</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </div>
+          <h1 class="sh-ind-hero-title">Your home.<br>Your rules.<br><span>Smarter living.</span></h1>
+          <p class="sh-ind-hero-description">Experience a home that understands your lifestyle. Connect your devices,
+            automate everyday moments, and enjoy effortless comfort, security, and control.</p>
+          <!--- Hero Buttons --->
+          <div class="sh-ind-hero-actions">
+            <a href="404.html" class="sh-ind-hero-btn sh-ind-hero-btn-primary">
+              <span>Explore Smart Solutions</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="404.html" class="sh-ind-hero-btn sh-ind-hero-btn-secondary">
+              <span class="sh-ind-hero-play"><i class="bi bi-play-fill"></i></span>
+              <span>Discover Stackly</span>
+            </a>
+          </div>
+          <!--- Hero Trust Indicators --->
+          <div class="sh-ind-hero-trust">
+            <div class="sh-ind-hero-trust-icon"><i class="bi bi-shield-check"></i></div>
+            <div class="sh-ind-hero-trust-copy">
+              <strong>Designed around you</strong>
+              <span>Comfort. Security. Simplicity.</span>
+            </div>
+            <div class="sh-ind-hero-trust-divider"></div>
+            <div class="sh-ind-hero-trust-icon sh-ind-hero-trust-icon-alt"><i class="bi bi-house-gear"></i></div>
+            <div class="sh-ind-hero-trust-copy">
+              <strong>One connected home</strong>
+              <span>Control your space smarter.</span>
+            </div>
+          </div>
+        </div>
+        <!--- Hero Visual --->
+        <div class="col-lg-6 sh-ind-hero-visual-column">
+          <div class="sh-ind-hero-visual">
+            <div class="sh-ind-hero-image-frame">
+              <img src="assets/images/home-hero-img.webp"
+                alt="Modern contemporary living room with elegant lighting and smart home design"
+                class="sh-ind-hero-image" fetchpriority="high" />
+              <div class="sh-ind-hero-image-overlay"></div>
+              <div class="sh-ind-hero-image-label">
+                <span class="sh-ind-hero-live-dot"></span>
+                <span>YOUR SPACE, REIMAGINED</span>
+              </div>
+              <div class="sh-ind-hero-image-caption">
+                <span>01 / INTELLIGENT LIVING</span>
+                <i class="bi bi-stars"></i>
+              </div>
+            </div>
+            <!--- Smart Home Status Card --->
+            <div class="sh-ind-hero-device-card sh-ind-hero-device-top">
+              <div class="sh-ind-hero-device-icon"><i class="bi bi-lightbulb"></i></div>
+              <div class="sh-ind-hero-device-info">
+                <span>SMART LIGHTING</span>
+                <strong>Ambient mode</strong>
+              </div>
+              <span class="sh-ind-hero-device-status">ON</span>
+            </div>
+            <!--- Climate Card --->
+            <div class="sh-ind-hero-climate-card">
+              <div class="sh-ind-hero-climate-heading">
+                <span class="sh-ind-hero-climate-icon"><i class="bi bi-thermometer-half"></i></span>
+                <span>CLIMATE CONTROL</span>
+              </div>
+              <div class="sh-ind-hero-temperature">22<span>°C</span></div>
+              <div class="sh-ind-hero-climate-footer">
+                <span><i class="bi bi-snow"></i> Cooling</span>
+                <span class="sh-ind-hero-climate-dot"></span>
+                <span>Optimal comfort</span>
+              </div>
+            </div>
+            <!--- Connection Indicator --->
+            <div class="sh-ind-hero-connect-card">
+              <span class="sh-ind-hero-connect-icon"><i class="bi bi-wifi"></i></span>
+              <span class="sh-ind-hero-connect-copy"><strong>Everything connected</strong><small>Your home, in
+                  sync</small></span>
+              <i class="bi bi-check-circle-fill sh-ind-hero-connect-check"></i>
+            </div>
+            <!--- Decorative Elements --->
+            <div class="sh-ind-hero-orbit sh-ind-hero-orbit-one"></div>
+            <div class="sh-ind-hero-orbit sh-ind-hero-orbit-two"></div>
+            <span class="sh-ind-hero-decoration sh-ind-hero-decoration-one">+</span>
+            <span class="sh-ind-hero-decoration sh-ind-hero-decoration-two">+</span>
+          </div>
+        </div>
+      </div>
+      <!--- Hero Bottom Bar --->
+      <div class="sh-ind-hero-bottom">
+        <span class="sh-ind-hero-bottom-label">A BETTER WAY TO LIVE</span>
+        <div class="sh-ind-hero-bottom-line"></div>
+        <span class="sh-ind-hero-bottom-text">Thoughtfully connected. Naturally intelligent.</span>
+        <a href="404.html" class="sh-ind-hero-bottom-link">Explore our ecosystem <i
+            class="bi bi-arrow-down-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Hero Section End --->
+
+  <!--- Smart Home Benefits Section Start --->
+  <section class="sh-ind-benefits" id="sh-ind-benefits">
+    <div class="sh-ind-benefits-container container">
+      <!--- Section Heading --->
+      <div class="sh-ind-benefits-heading">
+        <div class="sh-ind-benefits-eyebrow"><span></span> BETTER LIVING STARTS HERE</div>
+        <div class="sh-ind-benefits-heading-row">
+          <div class="sh-ind-benefits-heading-content">
+            <h2 class="sh-ind-benefits-title">More than smart devices.<br><span>A smarter way to live.</span></h2>
+            <p class="sh-ind-benefits-description">Technology should make life feel simpler, not more complicated.
+              Stackly brings your home together around the things that matter most.</p>
+          </div>
+          <a href="404.html" class="sh-ind-benefits-link">Discover the difference <i
+              class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+      <!--- Benefits Grid --->
+      <div class="sh-ind-benefits-grid">
+        <!--- Benefit Card 1 --->
+        <article class="sh-ind-benefits-card sh-ind-benefits-card-featured">
+          <div class="sh-ind-benefits-card-top">
+            <span class="sh-ind-benefits-number">01 / COMFORT</span>
+            <span class="sh-ind-benefits-icon"><i class="bi bi-house-heart"></i></span>
+          </div>
+          <div class="sh-ind-benefits-card-content">
+            <h3>Comfort that feels natural.</h3>
+            <p>Create the right atmosphere with lighting, temperature, and routines that fit your everyday life.</p>
+            <a href="404.html" class="sh-ind-benefits-card-link" aria-label="Explore comfort solutions"><i
+                class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <div class="sh-ind-benefits-card-visual sh-ind-benefits-comfort-visual">
+            <img src="assets/images/Smart-Home-Benefits-img.webp"
+              alt="Comfortable contemporary living room with warm ambient lighting" loading="lazy" />
+            <div class="sh-ind-benefits-visual-overlay"></div>
+            <div class="sh-ind-benefits-mini-status"><i class="bi bi-sun"></i><span>Ambient lighting</span><span
+                class="sh-ind-benefits-mini-dot"></span></div>
+          </div>
+        </article>
+        <!--- Benefit Card 2 --->
+        <article class="sh-ind-benefits-card">
+          <div class="sh-ind-benefits-card-top">
+            <span class="sh-ind-benefits-number">02 / SECURITY</span>
+            <span class="sh-ind-benefits-icon"><i class="bi bi-shield-check"></i></span>
+          </div>
+          <div class="sh-ind-benefits-card-content">
+            <h3>Peace of mind, wherever you are.</h3>
+            <p>Keep connected to compatible security devices and receive alerts when activity needs your attention.</p>
+            <a href="404.html" class="sh-ind-benefits-card-link" aria-label="Explore home security"><i
+                class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <div class="sh-ind-benefits-card-bottom">
+            <span class="sh-ind-benefits-bottom-icon"><i class="bi bi-lock"></i></span>
+            <span><strong>Security in your hands</strong><small>Stay informed and connected</small></span>
+            <i class="bi bi-check-circle sh-ind-benefits-bottom-check"></i>
+          </div>
+        </article>
+        <!--- Benefit Card 3 --->
+        <article class="sh-ind-benefits-card">
+          <div class="sh-ind-benefits-card-top">
+            <span class="sh-ind-benefits-number">03 / EFFICIENCY</span>
+            <span class="sh-ind-benefits-icon"><i class="bi bi-lightning-charge"></i></span>
+          </div>
+          <div class="sh-ind-benefits-card-content">
+            <h3>Use energy more thoughtfully.</h3>
+            <p>Build schedules and automate compatible devices to help reduce unnecessary energy use.</p>
+            <a href="404.html" class="sh-ind-benefits-card-link" aria-label="Explore energy efficiency"><i
+                class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <div class="sh-ind-benefits-energy-visual">
+            <div class="sh-ind-benefits-energy-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+            <div class="sh-ind-benefits-energy-copy"><span>SMARTER ROUTINES</span><strong>Less waste. More
+                control.</strong></div>
+            <div class="sh-ind-benefits-energy-wave">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </article>
+        <!--- Benefit Card 4 --->
+        <article class="sh-ind-benefits-card">
+          <div class="sh-ind-benefits-card-top">
+            <span class="sh-ind-benefits-number">04 / SIMPLICITY</span>
+            <span class="sh-ind-benefits-icon"><i class="bi bi-phone"></i></span>
+          </div>
+          <div class="sh-ind-benefits-card-content">
+            <h3>Everything works together.</h3>
+            <p>Bring compatible devices into one convenient experience, so everyday control feels effortless.</p>
+            <a href="404.html" class="sh-ind-benefits-card-link" aria-label="Explore connected home control"><i
+                class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <div class="sh-ind-benefits-control-visual">
+            <div class="sh-ind-benefits-control-device"><i class="bi bi-house-gear"></i></div>
+            <div class="sh-ind-benefits-control-line"></div>
+            <div class="sh-ind-benefits-control-nodes">
+              <span><i class="bi bi-lightbulb"></i></span>
+              <span><i class="bi bi-thermometer-half"></i></span>
+              <span><i class="bi bi-camera-video"></i></span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!--- Benefits Bottom Note --->
+      <div class="sh-ind-benefits-bottom">
+        <span class="sh-ind-benefits-bottom-mark"><i class="bi bi-stars"></i></span>
+        <p>Thoughtfully connected technology. <strong>Designed around your life.</strong></p>
+        <a href="404.html">Find your solution <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Smart Home Benefits Section End --->
+
+  <!--- Explore Smart Solutions Section Start --->
+  <section class="sh-ind-solutions" id="sh-ind-solutions">
+    <div class="container sh-ind-solutions-container">
+      <!--- Solutions Header --->
+      <div class="sh-ind-solutions-header">
+        <div class="sh-ind-solutions-heading-content">
+          <div class="sh-ind-solutions-eyebrow"><span></span> YOUR HOME, REIMAGINED</div>
+          <h2 class="sh-ind-solutions-title">One home. <span>Endless possibilities.</span></h2>
+          <p class="sh-ind-solutions-description">Discover connected solutions that bring comfort, control, and
+            intelligence into every corner of your home.</p>
+        </div>
+        <a href="404.html" class="sh-ind-solutions-view-all">Explore all solutions <i
+            class="bi bi-arrow-up-right"></i></a>
+      </div>
+      <!--- Solutions Grid --->
+      <div class="sh-ind-solutions-grid">
+        <!--- Home Security --->
+        <article class="sh-ind-solutions-card">
+          <img class="sh-ind-solutions-image" src="assets/images/iot-1.webp"
+            alt="Modern smart home security camera and connected security equipment" loading="lazy" />
+          <div class="sh-ind-solutions-image-shade"></div>
+          <div class="sh-ind-solutions-card-top">
+            <span class="sh-ind-solutions-category"><i class="bi bi-shield-check"></i> SECURITY</span>
+            <span class="sh-ind-solutions-index">02</span>
+          </div>
+          <div class="sh-ind-solutions-card-content">
+            <h3>Home Security</h3>
+            <p>Stay informed with connected security devices and timely alerts.</p>
+            <a href="404.html" class="sh-ind-solutions-card-link" aria-label="Explore home security"><span>Discover
+                solution</span><i class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <span class="sh-ind-solutions-card-glow"></span>
+        </article>
+        <!--- Smart Sensors --->
+        <article class="sh-ind-solutions-card ">
+          <img class="sh-ind-solutions-image" src="assets/images/iot-2.webp"
+            alt="Connected electronic sensors and smart home automation devices" loading="lazy" />
+          <div class="sh-ind-solutions-image-shade"></div>
+          <div class="sh-ind-solutions-card-top">
+            <span class="sh-ind-solutions-category"><i class="bi bi-broadcast"></i> SENSORS</span>
+            <span class="sh-ind-solutions-index">04</span>
+          </div>
+          <div class="sh-ind-solutions-card-content">
+            <h3>Smart Sensors</h3>
+            <p>Use compatible sensors to respond to changes around your home.</p>
+            <a href="404.html" class="sh-ind-solutions-card-link" aria-label="Explore smart sensors"><span>Discover
+                solution</span><i class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <span class="sh-ind-solutions-card-glow"></span>
+        </article>
+        <!--- Home Automation --->
+        <article class="sh-ind-solutions-card  sh-ind-solutions-card-automation">
+          <img class="sh-ind-solutions-image" src="assets/images/iot-3.webp"
+            alt="Elegant modern home with connected living spaces and architectural lighting" loading="lazy" />
+          <div class="sh-ind-solutions-image-shade"></div>
+          <div class="sh-ind-solutions-card-top">
+            <span class="sh-ind-solutions-category"><i class="bi bi-diagram-3"></i> AUTOMATION</span>
+            <span class="sh-ind-solutions-index">05</span>
+          </div>
+          <div class="sh-ind-solutions-card-content">
+            <h3>Home Automation</h3>
+            <p>Bring compatible devices together with routines that work around your day.</p>
+            <a href="404.html" class="sh-ind-solutions-card-link" aria-label="Explore home automation"><span>Discover
+                solution</span><i class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <span class="sh-ind-solutions-card-glow"></span>
+        </article>
+      </div>
+      <!--- Solutions Footer Note --->
+      <div class="sh-ind-solutions-footer">
+        <div class="sh-ind-solutions-footer-icon"><i class="bi bi-grid-1x2"></i></div>
+        <p><strong>Built around your lifestyle.</strong> Find the right combination of connected solutions for your
+          home.</p>
+        <a href="404.html">Find your setup <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Explore Smart Solutions Section End --->
+
+  <!--- One Connected Home Section Start --->
+  <section class="sh-ind-connected" id="sh-ind-connected">
+    <div class="container sh-ind-connected-container">
+      <div class="row align-items-center sh-ind-connected-row">
+        <!--- Connected Home Visual --->
+        <div class="col-lg-6 sh-ind-connected-visual-column">
+          <div class="sh-ind-connected-visual">
+            <div class="sh-ind-connected-image-frame">
+              <img src="assets/images/One-Connected-Home.webp"
+                alt="Contemporary connected home interior with modern architecture and ambient lighting"
+                class="sh-ind-connected-image" loading="lazy" />
+              <div class="sh-ind-connected-image-overlay"></div>
+              <div class="sh-ind-connected-image-label"><span></span> ONE HOME. ONE EXPERIENCE.</div>
+              <div class="sh-ind-connected-image-caption">
+                <span>INTELLIGENT SPACES</span>
+                <i class="bi bi-house-gear"></i>
+              </div>
+            </div>
+            <!--- Central Connection Diagram --->
+            <div class="sh-ind-connected-network">
+              <div class="sh-ind-connected-network-ring sh-ind-connected-ring-one"></div>
+              <div class="sh-ind-connected-network-ring sh-ind-connected-ring-two"></div>
+              <svg class="sh-ind-connected-network-lines" viewBox="0 0 260 260" aria-hidden="true">
+                <line x1="130" y1="130" x2="130" y2="35"></line>
+                <line x1="130" y1="130" x2="225" y2="130"></line>
+                <line x1="130" y1="130" x2="130" y2="225"></line>
+                <line x1="130" y1="130" x2="35" y2="130"></line>
+              </svg>
+              <div class="sh-ind-connected-network-center"><i class="bi bi-house-gear"></i><span></span></div>
+              <div class="sh-ind-connected-network-node sh-ind-connected-network-node-one"><i
+                  class="bi bi-lightbulb"></i></div>
+              <div class="sh-ind-connected-network-node sh-ind-connected-network-node-two"><i
+                  class="bi bi-shield-check"></i></div>
+              <div class="sh-ind-connected-network-node sh-ind-connected-network-node-three"><i
+                  class="bi bi-thermometer-half"></i></div>
+              <div class="sh-ind-connected-network-node sh-ind-connected-network-node-four"><i
+                  class="bi bi-broadcast"></i></div>
+            </div>
+            <!--- Connected Device Card --->
+            <div class="sh-ind-connected-device-card">
+              <span class="sh-ind-connected-device-icon"><i class="bi bi-wifi"></i></span>
+              <span class="sh-ind-connected-device-copy"><strong>One connected ecosystem</strong><small>Compatible
+                  devices, working together</small></span>
+              <i class="bi bi-check-circle-fill sh-ind-connected-device-check"></i>
+            </div>
+            <span class="sh-ind-connected-decoration sh-ind-connected-decoration-one">+</span>
+            <span class="sh-ind-connected-decoration sh-ind-connected-decoration-two">+</span>
+          </div>
+        </div>
+        <!--- Connected Home Content --->
+        <div class="col-lg-6 sh-ind-connected-content-column">
+          <div class="sh-ind-connected-content">
+            <div class="sh-ind-connected-eyebrow"><span></span> EVERYTHING IN SYNC</div>
+            <h2 class="sh-ind-connected-title">Your entire home.<br><span>Working as one.</span></h2>
+            <p class="sh-ind-connected-description">Bring your compatible smart devices into one seamless experience.
+              Manage everyday settings, create useful routines, and make your home feel more connected to the way you
+              live.</p>
+            <!--- Connected Features --->
+            <div class="sh-ind-connected-features">
+              <div class="sh-ind-connected-feature">
+                <div class="sh-ind-connected-feature-icon"><i class="bi bi-grid-1x2"></i></div>
+                <div class="sh-ind-connected-feature-content">
+                  <h3>One place to control</h3>
+                  <p>Access supported devices and settings through a centralized experience.</p>
+                </div>
+
+              </div>
+              <div class="sh-ind-connected-feature">
+                <div class="sh-ind-connected-feature-icon"><i class="bi bi-clock-history"></i></div>
+                <div class="sh-ind-connected-feature-content">
+                  <h3>Routines that fit your day</h3>
+                  <p>Organize compatible devices around your morning, evening, and everyday habits.</p>
+                </div>
+
+              </div>
+              <div class="sh-ind-connected-feature">
+                <div class="sh-ind-connected-feature-icon"><i class="bi bi-diagram-3"></i></div>
+                <div class="sh-ind-connected-feature-content">
+                  <h3>Devices in harmony</h3>
+                  <p>Build a connected setup designed around supported devices and integrations.</p>
+                </div>
+
+              </div>
+            </div>
+            <!--- Connected Home CTA --->
+            <div class="sh-ind-connected-actions">
+              <a href="404.html" class="sh-ind-connected-btn">Explore the ecosystem <i
+                  class="bi bi-arrow-up-right"></i></a>
+              <span class="sh-ind-connected-note"><i class="bi bi-check2-circle"></i> Designed for everyday
+                simplicity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--- One Connected Home Section End --->
+
+  <!--- How It Works Section Start --->
+  <section class="sh-ind-how" id="how-it-works">
+    <div class="container">
+      <!--- Section Heading --->
+      <div class="sh-ind-how-heading">
+        <div class="sh-ind-how-eyebrow"><span></span> SIMPLE BY DESIGN <span></span></div>
+        <h2>Smart living starts with <span>four simple steps.</span></h2>
+        <p>Transform your everyday home into an intelligent space without complicated setups or technical expertise.</p>
+      </div>
+      <!--- How It Works Steps --->
+      <div class="sh-ind-how-steps">
+        <div class="sh-ind-how-line"><span></span></div>
+        <!--- Step One --->
+        <article class="sh-ind-how-card">
+          <div class="sh-ind-how-number">01</div>
+          <div class="sh-ind-how-icon"><i class="bi bi-grid-1x2"></i><span class="sh-ind-how-icon-dot"></span></div>
+          <span class="sh-ind-how-label">STEP ONE</span>
+          <h3>Choose Your Devices</h3>
+          <p>Explore smart lights, security cameras, sensors, and connected devices that fit your lifestyle.</p>
+          <div class="sh-ind-how-meta"><i class="bi bi-check-circle"></i> Built around your needs</div>
+        </article>
+        <!--- Step Two --->
+        <article class="sh-ind-how-card">
+          <div class="sh-ind-how-number">02</div>
+          <div class="sh-ind-how-icon"><i class="bi bi-wifi"></i><span class="sh-ind-how-icon-dot"></span></div>
+          <span class="sh-ind-how-label">STEP TWO</span>
+          <h3>Connect Your Home</h3>
+          <p>Connect compatible devices to your home network and configure them for a seamless experience.</p>
+          <div class="sh-ind-how-meta"><i class="bi bi-check-circle"></i> Easy device setup</div>
+        </article>
+        <!--- Step Three --->
+        <article class="sh-ind-how-card">
+          <div class="sh-ind-how-number">03</div>
+          <div class="sh-ind-how-icon"><i class="bi bi-sliders"></i><span class="sh-ind-how-icon-dot"></span></div>
+          <span class="sh-ind-how-label">STEP THREE</span>
+          <h3>Personalize Your Space</h3>
+          <p>Organize devices, customize settings, and create routines that match your daily schedule.</p>
+          <div class="sh-ind-how-meta"><i class="bi bi-check-circle"></i> Your rules, your routine</div>
+        </article>
+        <!--- Step Four --->
+        <article class="sh-ind-how-card">
+          <div class="sh-ind-how-number">04</div>
+          <div class="sh-ind-how-icon"><i class="bi bi-house-check"></i><span class="sh-ind-how-icon-dot"></span></div>
+          <span class="sh-ind-how-label">STEP FOUR</span>
+          <h3>Live Smarter Every Day</h3>
+          <p>Manage your connected home, check device status, and enjoy greater comfort and control.</p>
+          <div class="sh-ind-how-meta"><i class="bi bi-check-circle"></i> Everyday intelligent living</div>
+        </article>
+      </div>
+      <!--- Section CTA --->
+      <div class="sh-ind-how-bottom">
+        <div class="sh-ind-how-bottom-icon"><i class="bi bi-lightning-charge"></i></div>
+        <div class="sh-ind-how-bottom-content">
+          <h3>Ready to make your home smarter?</h3>
+          <p>Discover connected solutions designed for the way you live.</p>
+        </div>
+        <a href="404.html" class="sh-ind-how-cta">Explore Solutions <i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- How It Works Section End --->
+
+  <!--- Testimonial Section Start --->
+  <section class="sh-ind-testimonials" id="testimonials">
+    <div class="container">
+      <!--- Testimonials Heading --->
+      <div class="sh-ind-testimonials-heading">
+        <div class="sh-ind-testimonials-eyebrow"><span></span> REAL HOMES. SMARTER LIVING. <span></span></div>
+        <div class="sh-ind-testimonials-heading-row">
+          <div>
+            <h2>Good things happen when <span>home gets smarter.</span></h2>
+            <p>Discover how connected living can make everyday moments simpler, safer, and more comfortable.</p>
+          </div>
+          <div class="sh-ind-testimonials-controls">
+            <button type="button" class="sh-ind-testimonials-arrow" id="sh-ind-testimonials-prev"
+              aria-label="Previous testimonials"><i class="bi bi-arrow-left"></i></button>
+            <button type="button" class="sh-ind-testimonials-arrow" id="sh-ind-testimonials-next"
+              aria-label="Next testimonials"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <!--- Testimonials Slider --->
+      <div class="sh-ind-testimonials-viewport" id="sh-ind-testimonials-viewport">
+        <div class="sh-ind-testimonials-track" id="sh-ind-testimonials-track">
+          <!--- Testimonial One --->
+          <article class="sh-ind-testimonial-card">
+            <div class="sh-ind-testimonial-top"><span class="sh-ind-testimonial-quote"><i
+                  class="bi bi-quote"></i></span><span class="sh-ind-testimonial-tag"><i class="bi bi-house-check"></i>
+                Everyday Comfort</span></div>
+            <div class="sh-ind-testimonial-stars" aria-label="5 out of 5 stars"><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i></div>
+            <blockquote>“The idea of controlling different parts of my home from one place makes everyday routines feel
+              much more effortless.”</blockquote>
+            <div class="sh-ind-testimonial-divider"></div>
+            <div class="sh-ind-testimonial-author">
+              <div class="sh-ind-testimonial-avatar sh-ind-testimonial-avatar-one">AR</div>
+              <div class="sh-ind-testimonial-author-info">
+                <h3>Arun Raj</h3>
+                <p>Homeowner</p>
+              </div>
+              <span class="sh-ind-testimonial-author-icon"><i class="bi bi-chat-quote"></i></span>
+            </div>
+          </article>
+          <!--- Testimonial Two --->
+          <article class="sh-ind-testimonial-card">
+            <div class="sh-ind-testimonial-top"><span class="sh-ind-testimonial-quote"><i
+                  class="bi bi-quote"></i></span><span class="sh-ind-testimonial-tag"><i class="bi bi-shield-check"></i>
+                Peace of Mind</span></div>
+            <div class="sh-ind-testimonial-stars" aria-label="5 out of 5 stars"><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i></div>
+            <blockquote>“Having a more connected approach to home security gives me a clearer picture of what is
+              happening around my space.”</blockquote>
+            <div class="sh-ind-testimonial-divider"></div>
+            <div class="sh-ind-testimonial-author">
+              <div class="sh-ind-testimonial-avatar sh-ind-testimonial-avatar-two">PM</div>
+              <div class="sh-ind-testimonial-author-info">
+                <h3>Priya Menon</h3>
+                <p>Working Professional</p>
+              </div>
+              <span class="sh-ind-testimonial-author-icon"><i class="bi bi-chat-quote"></i></span>
+            </div>
+          </article>
+          <!--- Testimonial Three --->
+          <article class="sh-ind-testimonial-card">
+            <div class="sh-ind-testimonial-top"><span class="sh-ind-testimonial-quote"><i
+                  class="bi bi-quote"></i></span><span class="sh-ind-testimonial-tag"><i
+                  class="bi bi-lightning-charge"></i> Smarter Routines</span></div>
+            <div class="sh-ind-testimonial-stars" aria-label="5 out of 5 stars"><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i></div>
+            <blockquote>“Automating simple daily tasks is what excites me most. Technology feels more useful when it
+              works around my routine.”</blockquote>
+            <div class="sh-ind-testimonial-divider"></div>
+            <div class="sh-ind-testimonial-author">
+              <div class="sh-ind-testimonial-avatar sh-ind-testimonial-avatar-three">VK</div>
+              <div class="sh-ind-testimonial-author-info">
+                <h3>Vikram Kumar</h3>
+                <p>Technology Enthusiast</p>
+              </div>
+              <span class="sh-ind-testimonial-author-icon"><i class="bi bi-chat-quote"></i></span>
+            </div>
+          </article>
+          <!--- Testimonial Four --->
+          <article class="sh-ind-testimonial-card">
+            <div class="sh-ind-testimonial-top"><span class="sh-ind-testimonial-quote"><i
+                  class="bi bi-quote"></i></span><span class="sh-ind-testimonial-tag"><i class="bi bi-sliders"></i>
+                Personal Control</span></div>
+            <div class="sh-ind-testimonial-stars" aria-label="5 out of 5 stars"><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i></div>
+            <blockquote>“A smart home should fit the people living in it. I love the idea of choosing devices and
+              routines that suit my own needs.”</blockquote>
+            <div class="sh-ind-testimonial-divider"></div>
+            <div class="sh-ind-testimonial-author">
+              <div class="sh-ind-testimonial-avatar sh-ind-testimonial-avatar-four">SN</div>
+              <div class="sh-ind-testimonial-author-info">
+                <h3>Sneha Nair</h3>
+                <p>Home Automation User</p>
+              </div>
+              <span class="sh-ind-testimonial-author-icon"><i class="bi bi-chat-quote"></i></span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!--- Testimonials Footer --->
+      <div class="sh-ind-testimonials-footer">
+        <div class="sh-ind-testimonials-progress"><span id="sh-ind-testimonials-progress"></span></div>
+        <span class="sh-ind-testimonials-counter"><span id="sh-ind-testimonials-current">01</span> <span>/</span> <span
+            id="sh-ind-testimonials-total">04</span></span>
+        <a href="404.html" class="sh-ind-testimonials-link">Let's build your smart home <i
+            class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--- Testimonial Section End --->
+
+
+
+  <!--- Footer Component --->
+  <div id="sh-footer-component"></div>
+
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

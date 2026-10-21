@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111719">
+    <title>Dashboard | Stackly Smart Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="sh-dashboard-body">
+    <!--- Dashboard Layout --->
+    <div class="sh-dashboard-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sh-dashboard-overlay" id="sh-dashboard-overlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="sh-dashboard-sidebar" id="sh-dashboard-sidebar" aria-label="Dashboard navigation">
+            <!--- Sidebar Logo --->
+            <a class="sh-dashboard-brand">
+                <span class="sh-dashboard-brand-icon"><i class="bi bi-house-gear-fill"></i></span>
+                <span class="sh-dashboard-brand-text"> STACKLY<span>SMART HOME</span></span>
+                <button type="button" class="sh-dashboard-close" id="sh-dashboard-close" aria-label="Close navigation">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </a>
+
+            <!--- Mobile Account Details --->
+            <div class="sh-dashboard-mobile-user">
+                <img src="assets/images/profile-1.webp" alt="Profile"
+                    class="sh-dashboard-avatar sh-dashboard-avatar-mobile">
+                <div class="sh-dashboard-user-details">
+                    <span class="sh-dashboard-user-label">SIGNED IN AS</span>
+                    <span class="sh-dashboard-sidebar-email" data-sh-user-email>Loading account...</span>
+                    <span class="sh-dashboard-user-role" data-sh-user-role>Smart Home User</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <div class="sh-dashboard-nav-heading">WORKSPACE</div>
+            <nav class="sh-dashboard-nav">
+                <a href="admin-dashboard.html" class="sh-dashboard-nav-link" data-sh-nav="dashboard">
+                    <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+                </a>
+                <a href="admin-products.html" class="sh-dashboard-nav-link is-active" data-sh-nav="devices">
+                    <i class="bi bi-cpu"></i><span>Products</span>
+                </a>
+                <a href="admin-analytics.html" class="sh-dashboard-nav-link" data-sh-nav="analytics">
+                    <i class="bi bi-graph-up-arrow"></i><span>Analytics</span>
+                </a>
+                <a href="admin-profile.html" class="sh-dashboard-nav-link" data-sh-nav="profile">
+                    <i class="bi bi-person-circle"></i><span>Profile</span>
+                </a>
+            </nav>
+
+            <!--- Sidebar Bottom --->
+            <div class="sh-dashboard-sidebar-bottom">
+                <div class="sh-dashboard-status">
+                    <span class="sh-dashboard-status-dot"></span>
+                    <span>Smart home workspace</span>
+                </div>
+                <button type="button" class="sh-dashboard-nav-link sh-dashboard-logout" id="sh-dashboard-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="sh-dashboard-main">
+            <!--- Topbar --->
+            <header class="sh-dashboard-topbar">
+                <div class="sh-dashboard-topbar-left">
+                    <button type="button" class="sh-dashboard-menu-toggle" id="sh-dashboard-menu-toggle"
+                        aria-label="Open navigation" aria-controls="sh-dashboard-sidebar" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="sh-dashboard-page-heading">
+                        <span class="sh-dashboard-page-eyebrow">SMART HOME CONTROL CENTER</span>
+                        <h1 class="sh-dashboard-page-title" id="sh-dashboard-page-title">Dashboard</h1>
+                    </div>
+                </div>
+
+                <!--- Desktop And Tablet Account --->
+                <div class="sh-dashboard-topbar-right">
+                    <div class="sh-dashboard-topbar-account">
+                        <span class="sh-dashboard-topbar-email" data-sh-user-email>Loading account...</span>
+                        <span class="sh-dashboard-topbar-status"><span></span> Account active</span>
+                    </div>
+                    <button type="button" class="sh-dashboard-profile-button" id="sh-dashboard-profile-button"
+                        aria-label="Open profile" title="Open profile">
+                        <img src="assets/images/profile-1.webp" alt="Profile" class="sh-dashboard-avatar">
+                    </button>
+                </div>
+            </header>
+
+            <!--- Dashboard Content --->
+            <main class="sh-dashboard-content">
+
+                <!--- Admin Products --->
+                <section class="sh-admin-products" aria-label="Product management">
+
+                    <!--- Products Heading --->
+                    <div class="sh-admin-products-heading">
+                        <div>
+                            <span class="sh-admin-products-eyebrow">INVENTORY MANAGEMENT</span>
+                            <h2>Products</h2>
+                            <p>Manage your smart home products, prices and stock.</p>
+                        </div>
+                        <button type="button" class="sh-admin-products-add" id="sh-admin-products-add">
+                            <i class="bi bi-plus-lg"></i><span>Add Product</span>
+                        </button>
+                    </div>
+
+                    <!--- Product Statistics --->
+                    <div class="sh-admin-products-stats">
+                        <article class="sh-admin-products-stat">
+                            <span class="sh-admin-products-stat-icon"><i class="bi bi-box-seam"></i></span>
+                            <div><span>Total Products</span><strong id="sh-admin-products-total">0</strong></div>
+                        </article>
+                        <article class="sh-admin-products-stat">
+                            <span class="sh-admin-products-stat-icon"><i class="bi bi-check-circle"></i></span>
+                            <div><span>In Stock</span><strong id="sh-admin-products-in-stock">0</strong></div>
+                        </article>
+                        <article class="sh-admin-products-stat">
+                            <span class="sh-admin-products-stat-icon sh-admin-products-stat-low"><i
+                                    class="bi bi-exclamation-triangle"></i></span>
+                            <div><span>Low Stock</span><strong id="sh-admin-products-low-stock">0</strong></div>
+                        </article>
+                        <article class="sh-admin-products-stat">
+                            <span class="sh-admin-products-stat-icon sh-admin-products-stat-out"><i
+                                    class="bi bi-x-circle"></i></span>
+                            <div><span>Out of Stock</span><strong id="sh-admin-products-out-stock">0</strong></div>
+                        </article>
+                    </div>
+
+                    <!--- Product Catalogue --->
+                    <div class="sh-admin-products-panel">
+                        <div class="sh-admin-products-panel-heading">
+                            <div>
+                                <h3>Product Catalogue</h3>
+                                <p>View and manage your inventory.</p>
+                            </div>
+                            <span class="sh-admin-products-demo-tag"><i class="bi bi-database"></i> Demo
+                                inventory</span>
+                        </div>
+
+                        <!--- Product Toolbar --->
+                        <div class="sh-admin-products-toolbar">
+                            <label class="sh-admin-products-search">
+                                <i class="bi bi-search"></i>
+                                <input type="search" id="sh-admin-products-search" placeholder="Search products..."
+                                    aria-label="Search products">
+                            </label>
+                            <select id="sh-admin-products-category" aria-label="Filter by category">
+                                <option value="all">All Categories</option>
+                                <option value="Lighting">Lighting</option>
+                                <option value="Security">Security</option>
+                                <option value="Climate">Climate</option>
+                                <option value="Sensors">Sensors</option>
+                                <option value="Controllers">Controllers</option>
+                            </select>
+                            <select id="sh-admin-products-sort" aria-label="Sort products">
+                                <option value="newest">Newest First</option>
+                                <option value="name-asc">Name A–Z</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="stock-low">Lowest Stock</option>
+                            </select>
+                        </div>
+
+                        <!--- Product Results Info --->
+                        <div class="sh-admin-products-results">
+                            <span id="sh-admin-products-result-count">Loading products...</span>
+                            <button type="button" id="sh-admin-products-reset" class="sh-admin-products-reset">
+                                <i class="bi bi-arrow-counterclockwise"></i> Reset filters
+                            </button>
+                        </div>
+
+                        <!--- Product Table --->
+                        <div class="sh-admin-products-table-wrap">
+                            <table class="sh-admin-products-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Stock</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="sh-admin-products-table-body"></tbody>
+                            </table>
+                            <div class="sh-admin-products-empty" id="sh-admin-products-empty" hidden>
+                                <i class="bi bi-search"></i>
+                                <strong>No products found</strong>
+                                <span>Try another search or reset your filters.</span>
+                            </div>
+                        </div>
+
+                        <!--- Product Catalogue Footer --->
+                        <div class="sh-admin-products-table-footer">
+                            <span>Showing <strong id="sh-admin-products-showing">0</strong> products</span>
+                            <span><i class="bi bi-shield-check"></i> Admin inventory workspace</span>
+                        </div>
+                    </div>
+
+                    <!--- Product Add And Edit Modal --->
+                    <div class="modal fade sh-admin-products-modal" id="sh-admin-products-modal" tabindex="-1"
+                        aria-labelledby="sh-admin-products-modal-title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <form id="sh-admin-products-form">
+                                    <div class="modal-header">
+                                        <div>
+                                            <span class="sh-admin-products-eyebrow">INVENTORY WORKSPACE</span>
+                                            <h2 class="modal-title" id="sh-admin-products-modal-title">Add Product</h2>
+                                        </div>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" id="sh-admin-products-id">
+
+                                        <div class="sh-admin-products-form-field">
+                                            <label for="sh-admin-products-name">Product Name</label>
+                                            <input type="text" id="sh-admin-products-name" maxlength="80" required
+                                                placeholder="e.g. Smart LED Bulb">
+                                        </div>
+
+                                        <div class="sh-admin-products-form-row">
+                                            <div class="sh-admin-products-form-field">
+                                                <label for="sh-admin-products-form-category">Category</label>
+                                                <select id="sh-admin-products-form-category" required>
+                                                    <option value="">Select category</option>
+                                                    <option value="Lighting">Lighting</option>
+                                                    <option value="Security">Security</option>
+                                                    <option value="Climate">Climate</option>
+                                                    <option value="Sensors">Sensors</option>
+                                                    <option value="Controllers">Controllers</option>
+                                                </select>
+                                            </div>
+                                            <div class="sh-admin-products-form-field">
+                                                <label for="sh-admin-products-price">Price (₹)</label>
+                                                <input type="number" id="sh-admin-products-price" min="1" max="10000000"
+                                                    step="1" required placeholder="1499">
+                                            </div>
+                                        </div>
+
+                                        <div class="sh-admin-products-form-row">
+                                            <div class="sh-admin-products-form-field">
+                                                <label for="sh-admin-products-stock">Stock Quantity</label>
+                                                <input type="number" id="sh-admin-products-stock" min="0" max="1000000"
+                                                    step="1" required placeholder="25">
+                                            </div>
+                                            <div class="sh-admin-products-form-field">
+                                                <label for="sh-admin-products-sku">Product SKU</label>
+                                                <input type="text" id="sh-admin-products-sku" maxlength="30" required
+                                                    placeholder="STK-001">
+                                            </div>
+                                        </div>
+
+                                        <div class="sh-admin-products-form-field">
+                                            <label for="sh-admin-products-description">Description</label>
+                                            <textarea id="sh-admin-products-description" maxlength="240" rows="3"
+                                                placeholder="Short product description"></textarea>
+                                        </div>
+                                        <p class="sh-admin-products-form-note"><i class="bi bi-info-circle"></i> Changes
+                                            are stored in this browser demo only.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="sh-admin-products-cancel"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="sh-admin-products-save"
+                                            id="sh-admin-products-save"><i class="bi bi-check2"></i> Save
+                                            Product</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- Delete Confirmation Modal --->
+                    <div class="modal fade sh-admin-products-modal" id="sh-admin-products-delete-modal" tabindex="-1"
+                        aria-labelledby="sh-admin-products-delete-title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div>
+                                        <span class="sh-admin-products-eyebrow">CONFIRM ACTION</span>
+                                        <h2 class="modal-title" id="sh-admin-products-delete-title">Delete product?</h2>
+                                    </div>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="sh-admin-products-delete-copy">Are you sure you want to delete <strong
+                                            id="sh-admin-products-delete-name">this product</strong>? This action cannot
+                                        be undone in this demo.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="sh-admin-products-cancel"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="sh-admin-products-delete-confirm"
+                                        id="sh-admin-products-delete-confirm"><i class="bi bi-trash3"></i> Delete
+                                        Product</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- Product Feedback --->
+                    <div class="sh-admin-products-toast" id="sh-admin-products-toast" role="status" aria-live="polite">
+                        <i class="bi bi-check-circle"></i><span id="sh-admin-products-toast-message">Product
+                            updated.</span>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-products.js"></script>
+</body>
+
+</html>

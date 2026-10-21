@@ -1,0 +1,542 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Smart Home IoT Platform</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div class="sh-ldr-main" id="sh-ldr-main" role="status" aria-label="Loading Stackly">
+        <!--- Loader Background --->
+        <div class="sh-ldr-grid"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-one"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-two"></div>
+        <div class="sh-ldr-particles" id="sh-ldr-particles"></div>
+        <!--- Loader Content --->
+        <div class="sh-ldr-content">
+            <!--- Animated Smart Home Icon --->
+            <div class="sh-ldr-visual">
+                <div class="sh-ldr-orbit sh-ldr-orbit-one"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-two"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-three"></div>
+                <div class="sh-ldr-icon-wrap">
+                    <i class="bi bi-house-gear sh-ldr-house-icon"></i>
+                    <span class="sh-ldr-icon-dot"></span>
+                </div>
+                <span class="sh-ldr-signal sh-ldr-signal-one"></span>
+                <span class="sh-ldr-signal sh-ldr-signal-two"></span>
+            </div>
+            <!--- Brand --->
+            <a href="index.html" class="sh-ldr-brand" aria-label="Stackly home">stackly<span>.</span></a>
+            <p class="sh-ldr-tagline">INTELLIGENT LIVING</p>
+            <!--- Loading Message --->
+            <div class="sh-ldr-message-wrap">
+                <span class="sh-ldr-status-dot"></span>
+                <p class="sh-ldr-message" id="sh-ldr-message">Connecting your smart experience...</p>
+            </div>
+            <!--- Decorative Signal --->
+            <div class="sh-ldr-signal-line"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <!--- Loader Footer --->
+        <div class="sh-ldr-footer">
+            <span>SMARTER SPACES. SIMPLER LIVING.</span>
+            <span class="sh-ldr-footer-status"><i class="bi bi-shield-check"></i> SYSTEM INITIALIZING</span>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- Navbar Component --->
+    <div id="sh-navbar-component"></div>
+
+    <!--- Page Hero Container --->
+    <div id="sh-page-hero-component" data-page="about"></div>
+
+    <!--- Our Story — Who We Are Section Start --->
+    <section class="sh-abt-story" id="our-story">
+        <div class="container">
+            <div class="sh-abt-story-layout">
+                <!--- Story Visual --->
+                <div class="sh-abt-story-visual sh-abt-story-reveal">
+                    <div class="sh-abt-story-image-wrap">
+                        <img src="assets/images/Our Story — Who We Are.webp"
+                            alt="Modern contemporary home with thoughtfully designed interior lighting"
+                            class="sh-abt-story-image" loading="lazy">
+                        <div class="sh-abt-story-image-overlay"></div>
+                    </div>
+                    <!--- Visual Top Label --->
+                    <div class="sh-abt-story-visual-label"><span class="sh-abt-story-label-dot"></span> THE FUTURE OF
+                        LIVING</div>
+                    <!--- Floating Smart Home Card --->
+                    <div class="sh-abt-story-float-card sh-abt-story-float-card-one">
+                        <span class="sh-abt-story-float-icon"><i class="bi bi-house-gear"></i></span>
+                        <div><span>OUR APPROACH</span><strong>Connected by design</strong></div>
+                    </div>
+                    <!--- Floating Connection Card --->
+                    <div class="sh-abt-story-float-card sh-abt-story-float-card-two">
+                        <div class="sh-abt-story-connection-icon"><i class="bi bi-diagram-3"></i></div>
+                        <div><strong>One connected space</strong><span>Devices. Routines. Simplicity.</span></div>
+                    </div>
+                    <!--- Image Corner Detail --->
+                    <div class="sh-abt-story-corner"><span>01</span><span>—</span><span>OUR STORY</span></div>
+                    <div class="sh-abt-story-image-frame"></div>
+                </div>
+                <!--- Story Content --->
+                <div class="sh-abt-story-content sh-abt-story-reveal">
+                    <div class="sh-abt-story-eyebrow"><span></span> OUR STORY <span
+                            class="sh-abt-story-eyebrow-line"></span></div>
+                    <h2>Technology should make life <span>feel effortless.</span></h2>
+                    <p class="sh-abt-story-intro">A smarter home isn't about having more technology. It's about making
+                        the technology you use work better together.</p>
+                    <p class="sh-abt-story-description">At Stackly, we believe connected living should feel intuitive,
+                        useful, and personal. Our vision is to bring smart home experiences together in a way that helps
+                        people manage their spaces with greater convenience and confidence.</p>
+                    <p class="sh-abt-story-description">From lighting and climate control to security and automation, we
+                        focus on the possibilities of a more connected home — where everyday routines can become simpler
+                        and technology feels like a natural part of your life.</p>
+                    <!--- Story Principles --->
+                    <div class="sh-abt-story-principles">
+                        <div class="sh-abt-story-principle">
+                            <span class="sh-abt-story-principle-icon"><i class="bi bi-lightbulb"></i></span>
+                            <div>
+                                <h3>Purposeful Innovation</h3>
+                                <p>Technology with a clear everyday benefit.</p>
+                            </div>
+                        </div>
+                        <div class="sh-abt-story-principle">
+                            <span class="sh-abt-story-principle-icon"><i class="bi bi-grid-1x2"></i></span>
+                            <div>
+                                <h3>Connected Experiences</h3>
+                                <p>A more unified approach to smart living.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- Story CTA --->
+                    <div class="sh-abt-story-actions">
+                        <a href="404.html" class="sh-abt-story-cta">Explore Our Solutions <i
+                                class="bi bi-arrow-up-right"></i></a>
+                        <span class="sh-abt-story-note"><i class="bi bi-stars"></i> Designed around everyday life</span>
+                    </div>
+                </div>
+            </div>
+            <!--- Story Bottom Statement --->
+            <div class="sh-abt-story-bottom sh-abt-story-reveal">
+                <span class="sh-abt-story-bottom-line"></span>
+                <p>Less complexity. More connection. <span>A better way to live.</span></p>
+                <span class="sh-abt-story-bottom-line"></span>
+            </div>
+        </div>
+    </section>
+    <!--- Our Story — Who We Are Section End --->
+
+    <!--- Our Mission & Vision Section Start --->
+    <section class="sh-abt-mv" id="mission-vision">
+        <div class="container">
+            <!--- Section Heading --->
+            <div class="sh-abt-mv-heading">
+                <div class="sh-abt-mv-eyebrow"><span></span> OUR PURPOSE & DIRECTION <span
+                        class="sh-abt-mv-eyebrow-line"></span></div>
+                <h2>Driven by purpose. <span>Inspired by possibility.</span></h2>
+                <p>Our mission guides what we build today. Our vision shapes the smarter, more connected homes we
+                    imagine for tomorrow.</p>
+            </div>
+            <!--- Mission and Vision Cards --->
+            <div class="sh-abt-mv-grid">
+                <!--- Mission Card --->
+                <article class="sh-abt-mv-card sh-abt-mv-mission">
+                    <div class="sh-abt-mv-card-top">
+                        <div class="sh-abt-mv-card-label"><span class="sh-abt-mv-status-dot"></span> WHAT DRIVES US
+                        </div>
+                        <span class="sh-abt-mv-card-index">01 / MISSION</span>
+                    </div>
+                    <!--- Mission Visual --->
+                    <div class="sh-abt-mv-visual sh-abt-mv-visual-mission">
+                        <div class="sh-abt-mv-visual-grid"></div>
+                        <div class="sh-abt-mv-mission-orbit sh-abt-mv-mission-orbit-one"></div>
+                        <div class="sh-abt-mv-mission-orbit sh-abt-mv-mission-orbit-two"></div>
+                        <div class="sh-abt-mv-mission-core"><i class="bi bi-house-gear"></i><span></span></div>
+                        <div class="sh-abt-mv-mission-node sh-abt-mv-mission-node-one"><i class="bi bi-lightbulb"></i>
+                        </div>
+                        <div class="sh-abt-mv-mission-node sh-abt-mv-mission-node-two"><i
+                                class="bi bi-shield-check"></i></div>
+                        <div class="sh-abt-mv-mission-node sh-abt-mv-mission-node-three"><i
+                                class="bi bi-thermometer-half"></i></div>
+                        <div class="sh-abt-mv-mission-node sh-abt-mv-mission-node-four"><i class="bi bi-sliders"></i>
+                        </div>
+                        <span class="sh-abt-mv-visual-caption"><i class="bi bi-diagram-3"></i> TECHNOLOGY WITH
+                            PURPOSE</span>
+                    </div>
+                    <div class="sh-abt-mv-card-content">
+                        <span class="sh-abt-mv-kicker">OUR MISSION</span>
+                        <h3>Make smart living feel <span>simple and natural.</span></h3>
+                        <p>Our mission is to make connected home experiences more intuitive and useful by bringing smart
+                            devices, everyday routines, and home control into a more unified experience.</p>
+                        <div class="sh-abt-mv-points">
+                            <div><i class="bi bi-check2"></i><span>Simplify everyday interactions</span></div>
+                            <div><i class="bi bi-check2"></i><span>Put people at the center of technology</span></div>
+                            <div><i class="bi bi-check2"></i><span>Make connected living more accessible</span></div>
+                        </div>
+                        <div class="sh-abt-mv-card-footer"><span>BUILT AROUND EVERYDAY LIFE</span></div>
+                    </div>
+                </article>
+                <!--- Vision Card --->
+                <article class="sh-abt-mv-card sh-abt-mv-vision">
+                    <div class="sh-abt-mv-card-top">
+                        <div class="sh-abt-mv-card-label"><span class="sh-abt-mv-status-dot"></span> WHERE WE'RE HEADED
+                        </div>
+                        <span class="sh-abt-mv-card-index">02 / VISION</span>
+                    </div>
+                    <!--- Vision Visual --->
+                    <div class="sh-abt-mv-visual sh-abt-mv-visual-vision">
+                        <div class="sh-abt-mv-vision-grid"></div>
+                        <div class="sh-abt-mv-vision-sun"></div>
+                        <div class="sh-abt-mv-vision-ring sh-abt-mv-vision-ring-one"></div>
+                        <div class="sh-abt-mv-vision-ring sh-abt-mv-vision-ring-two"></div>
+                        <div class="sh-abt-mv-vision-ring sh-abt-mv-vision-ring-three"></div>
+                        <div class="sh-abt-mv-vision-house"><i class="bi bi-house-heart"></i></div>
+                        <div class="sh-abt-mv-vision-spark sh-abt-mv-vision-spark-one"><i class="bi bi-stars"></i></div>
+                        <div class="sh-abt-mv-vision-spark sh-abt-mv-vision-spark-two"><i
+                                class="bi bi-lightning-charge"></i></div>
+                        <div class="sh-abt-mv-vision-spark sh-abt-mv-vision-spark-three"><i class="bi bi-infinity"></i>
+                        </div>
+                        <span class="sh-abt-mv-visual-caption"><i class="bi bi-globe2"></i> A MORE CONNECTED
+                            TOMORROW</span>
+                    </div>
+                    <div class="sh-abt-mv-card-content">
+                        <span class="sh-abt-mv-kicker">OUR VISION</span>
+                        <h3>A future where homes <span>work in harmony.</span></h3>
+                        <p>We envision a world where connected technology works more naturally together, helping people
+                            create living spaces that adapt to their preferences, routines, and changing needs.</p>
+                        <div class="sh-abt-mv-points">
+                            <div><i class="bi bi-check2"></i><span>Encourage meaningful innovation</span></div>
+                            <div><i class="bi bi-check2"></i><span>Bring connected experiences together</span></div>
+                            <div><i class="bi bi-check2"></i><span>Shape more thoughtful living spaces</span></div>
+                        </div>
+                        <div class="sh-abt-mv-card-footer"><span>INSPIRED BY WHAT'S POSSIBLE</span></div>
+                    </div>
+                </article>
+            </div>
+            <!--- Mission Vision Closing Statement --->
+            <div class="sh-abt-mv-bottom">
+                <span class="sh-abt-mv-bottom-icon"><i class="bi bi-compass"></i></span>
+                <p>One clear purpose. <span>One more connected future.</span></p>
+                <a href="404.html">Discover our solutions <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- Our Mission & Vision Section End --->
+
+    <!--- The Problem We Solve Section Start --->
+    <section class="sh-abt-problem" id="problem-we-solve">
+        <div class="container">
+            <!--- Section Heading --->
+            <div class="sh-abt-problem-heading">
+                <div class="sh-abt-problem-eyebrow"><span></span> THE CHALLENGE WE'RE ADDRESSING <span
+                        class="sh-abt-problem-eyebrow-line"></span></div>
+                <h2>Your home is connected.<br><span>But does it work together?</span></h2>
+                <p>Smart technology should make everyday life easier. When devices and experiences feel disconnected,
+                    that promise can get lost.</p>
+            </div>
+            <!--- Problem Layout --->
+            <div class="sh-abt-problem-layout">
+                <!--- Problem Cards --->
+                <div class="sh-abt-problem-left">
+                    <div class="sh-abt-problem-side-label"><span class="sh-abt-problem-side-number">01</span> THE
+                        EVERYDAY CHALLENGES</div>
+                    <div class="sh-abt-problem-cards">
+                        <!--- Problem One --->
+                        <article class="sh-abt-problem-card">
+                            <div class="sh-abt-problem-card-top"><span class="sh-abt-problem-icon"><i
+                                        class="bi bi-grid"></i></span><span class="sh-abt-problem-card-index">CHALLENGE
+                                    01</span></div>
+                            <h3>Too Many Separate Controls</h3>
+                            <p>Managing different devices across separate apps and interfaces can make simple tasks feel
+                                complicated.</p>
+                            <div class="sh-abt-problem-card-bottom"><span class="sh-abt-problem-status-dot"></span>
+                                DISCONNECTED EXPERIENCES</div>
+                        </article>
+                        <!--- Problem Two --->
+                        <article class="sh-abt-problem-card">
+                            <div class="sh-abt-problem-card-top"><span class="sh-abt-problem-icon"><i
+                                        class="bi bi-diagram-2"></i></span><span
+                                    class="sh-abt-problem-card-index">CHALLENGE 02</span></div>
+                            <h3>Devices That Feel Isolated</h3>
+                            <p>When compatible devices don't work together smoothly, it's harder to create a coordinated
+                                home experience.</p>
+                            <div class="sh-abt-problem-card-bottom"><span class="sh-abt-problem-status-dot"></span>
+                                LIMITED COORDINATION</div>
+                        </article>
+                        <!--- Problem Three --->
+                        <article class="sh-abt-problem-card">
+                            <div class="sh-abt-problem-card-top"><span class="sh-abt-problem-icon"><i
+                                        class="bi bi-sliders"></i></span><span
+                                    class="sh-abt-problem-card-index">CHALLENGE 03</span></div>
+                            <h3>Complicated Daily Routines</h3>
+                            <p>Repeating the same adjustments every day can take away from the convenience technology
+                                should provide.</p>
+                            <div class="sh-abt-problem-card-bottom"><span class="sh-abt-problem-status-dot"></span>
+                                UNNECESSARY EFFORT</div>
+                        </article>
+                        <!--- Problem Four --->
+                        <article class="sh-abt-problem-card">
+                            <div class="sh-abt-problem-card-top"><span class="sh-abt-problem-icon"><i
+                                        class="bi bi-eye"></i></span><span class="sh-abt-problem-card-index">CHALLENGE
+                                    04</span></div>
+                            <h3>Limited At-a-Glance Awareness</h3>
+                            <p>Checking the status of different devices separately can make it harder to understand
+                                what's happening at home.</p>
+                            <div class="sh-abt-problem-card-bottom"><span class="sh-abt-problem-status-dot"></span>
+                                FRAGMENTED VISIBILITY</div>
+                        </article>
+                    </div>
+                </div>
+                <!--- Stackly Solution Panel --->
+                <div class="sh-abt-problem-right">
+                    <div class="sh-abt-problem-solution">
+                        <div class="sh-abt-problem-solution-top"><span><i class="bi bi-stars"></i> THE STACKLY
+                                APPROACH</span><span class="sh-abt-problem-solution-index">02 / SOLUTION</span></div>
+                        <!--- Connected Home Diagram --->
+                        <div class="sh-abt-problem-diagram">
+                            <div class="sh-abt-problem-diagram-ring sh-abt-problem-diagram-ring-one"></div>
+                            <div class="sh-abt-problem-diagram-ring sh-abt-problem-diagram-ring-two"></div>
+                            <svg class="sh-abt-problem-connectors" viewBox="0 0 320 250"
+                                preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                                <line x1="160" y1="125" x2="65" y2="55"></line>
+                                <line x1="160" y1="125" x2="255" y2="55"></line>
+                                <line x1="160" y1="125" x2="65" y2="195"></line>
+                                <line x1="160" y1="125" x2="255" y2="195"></line>
+                                <circle cx="65" cy="55" r="3"></circle>
+                                <circle cx="255" cy="55" r="3"></circle>
+                                <circle cx="65" cy="195" r="3"></circle>
+                                <circle cx="255" cy="195" r="3"></circle>
+                            </svg>
+                            <div class="sh-abt-problem-diagram-core"><i
+                                    class="bi bi-house-gear"></i><span>STACKLY</span></div>
+                            <div class="sh-abt-problem-device sh-abt-problem-device-one"><i
+                                    class="bi bi-lightbulb"></i><span>Lighting</span></div>
+                            <div class="sh-abt-problem-device sh-abt-problem-device-two"><i
+                                    class="bi bi-shield-check"></i><span>Security</span></div>
+                            <div class="sh-abt-problem-device sh-abt-problem-device-three"><i
+                                    class="bi bi-thermometer-half"></i><span>Climate</span></div>
+                            <div class="sh-abt-problem-device sh-abt-problem-device-four"><i
+                                    class="bi bi-broadcast"></i><span>Sensors</span></div>
+                        </div>
+                        <!--- Solution Description --->
+                        <div class="sh-abt-problem-solution-copy">
+                            <span class="sh-abt-problem-solution-kicker">A MORE UNIFIED EXPERIENCE</span>
+                            <h3>Bring the pieces of smart living <span>closer together.</span></h3>
+                            <p>Stackly's vision is to simplify connected living with a more unified way to manage
+                                compatible devices, personalize routines, and understand your home.</p>
+                        </div>
+                        <!--- Solution Features --->
+                        <div class="sh-abt-problem-solution-list">
+                            <div><span><i class="bi bi-check2"></i></span>
+                                <p>More convenient device management</p>
+                            </div>
+                            <div><span><i class="bi bi-check2"></i></span>
+                                <p>More coordinated daily routines</p>
+                            </div>
+                            <div><span><i class="bi bi-check2"></i></span>
+                                <p>A clearer view of connected devices</p>
+                            </div>
+                        </div>
+                        <a href="404.html" class="sh-abt-problem-cta">Explore Smart Solutions <i
+                                class="bi bi-arrow-up-right"></i></a>
+                        <div class="sh-abt-problem-solution-footer"><i class="bi bi-lightning-charge"></i> LESS
+                            COMPLEXITY. MORE CONNECTION.</div>
+                    </div>
+                </div>
+            </div>
+            <!--- Bottom Statement --->
+            <div class="sh-abt-problem-bottom"><span></span>
+                <p>Technology should adapt to your life, <strong>not the other way around.</strong></p><span></span>
+            </div>
+        </div>
+    </section>
+    <!--- The Problem We Solve Section End --->
+
+    <!--- Our Smart Technology Section Start --->
+    <section class="sh-abt-tech" id="sh-abt-tech">
+        <div class="container">
+            <div class="sh-abt-tech-heading">
+                <div class="sh-abt-tech-heading-content">
+                    <span class="sh-abt-tech-eyebrow"><span></span> BUILT FOR INTELLIGENT LIVING</span>
+                    <h2>Our Smart Technology.<br><span>One Connected Experience.</span></h2>
+                    <p>Discover how connected devices, intelligent automation, and thoughtful design can make everyday
+                        living simpler, smarter, and more comfortable.</p>
+                </div>
+                <a href="404.html" class="sh-abt-tech-explore">Explore Our Solutions <i
+                        class="bi bi-arrow-up-right"></i></a>
+            </div>
+            <!--- Technology Overview --->
+            <div class="sh-abt-tech-overview">
+                <div class="sh-abt-tech-visual">
+                    <div class="sh-abt-tech-visual-grid"></div>
+                    <div class="sh-abt-tech-visual-glow"></div>
+                    <div class="sh-abt-tech-orbit sh-abt-tech-orbit-one"></div>
+                    <div class="sh-abt-tech-orbit sh-abt-tech-orbit-two"></div>
+                    <div class="sh-abt-tech-orbit sh-abt-tech-orbit-three"></div>
+                    <svg class="sh-abt-tech-connections" viewBox="0 0 600 460" fill="none" aria-hidden="true">
+                        <path d="M300 230 L135 105 M300 230 L465 105 M300 230 L135 355 M300 230 L465 355" />
+                        <circle cx="135" cy="105" r="4" />
+                        <circle cx="465" cy="105" r="4" />
+                        <circle cx="135" cy="355" r="4" />
+                        <circle cx="465" cy="355" r="4" />
+                    </svg>
+                    <div class="sh-abt-tech-core">
+                        <div class="sh-abt-tech-core-ring"><i class="bi bi-house-gear"></i></div>
+                        <span>STACKLY</span>
+                        <small>CONNECTED LIVING</small>
+                    </div>
+                    <div class="sh-abt-tech-node sh-abt-tech-node-light">
+                        <span class="sh-abt-tech-node-icon"><i class="bi bi-lightbulb"></i></span>
+                        <span class="sh-abt-tech-node-info"><strong>Smart Lighting</strong><small>Lighting
+                                control</small></span>
+                        <span class="sh-abt-tech-node-status"></span>
+                    </div>
+                    <div class="sh-abt-tech-node sh-abt-tech-node-security">
+                        <span class="sh-abt-tech-node-icon"><i class="bi bi-shield-check"></i></span>
+                        <span class="sh-abt-tech-node-info"><strong>Home Security</strong><small>Connected
+                                protection</small></span>
+                        <span class="sh-abt-tech-node-status"></span>
+                    </div>
+                    <div class="sh-abt-tech-node sh-abt-tech-node-climate">
+                        <span class="sh-abt-tech-node-icon"><i class="bi bi-thermometer-half"></i></span>
+                        <span class="sh-abt-tech-node-info"><strong>Climate Control</strong><small>Comfort
+                                management</small></span>
+                        <span class="sh-abt-tech-node-status"></span>
+                    </div>
+                    <div class="sh-abt-tech-node sh-abt-tech-node-sensors">
+                        <span class="sh-abt-tech-node-icon"><i class="bi bi-broadcast"></i></span>
+                        <span class="sh-abt-tech-node-info"><strong>Smart Sensors</strong><small>Environmental
+                                inputs</small></span>
+                        <span class="sh-abt-tech-node-status"></span>
+                    </div>
+                    <div class="sh-abt-tech-visual-caption"><span></span> A MORE CONNECTED WAY TO LIVE</div>
+                </div>
+                <div class="sh-abt-tech-overview-content">
+                    <span class="sh-abt-tech-label">TECHNOLOGY THAT WORKS TOGETHER</span>
+                    <h3>Intelligence behind <span>every interaction.</span></h3>
+                    <p>A smart home should feel effortless. Our technology approach brings connected devices and
+                        intuitive control together, helping create a more coordinated home experience.</p>
+                    <div class="sh-abt-tech-capabilities">
+                        <div class="sh-abt-tech-capability"><span><i class="bi bi-diagram-3"></i></span>
+                            <div>
+                                <h4>Connected Ecosystem</h4>
+                                <p>Bring compatible smart devices into a more unified experience.</p>
+                            </div>
+                        </div>
+                        <div class="sh-abt-tech-capability"><span><i class="bi bi-sliders"></i></span>
+                            <div>
+                                <h4>Flexible Control</h4>
+                                <p>Make everyday adjustments through clear, intuitive controls.</p>
+                            </div>
+                        </div>
+                        <div class="sh-abt-tech-capability"><span><i class="bi bi-lightning-charge"></i></span>
+                            <div>
+                                <h4>Automation Ready</h4>
+                                <p>Build routines around your preferences and daily habits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="404.html" class="sh-abt-tech-link">Discover the possibilities <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <!--- Technology Feature Cards --->
+            <div class="sh-abt-tech-features">
+                <article class="sh-abt-tech-card">
+                    <div class="sh-abt-tech-card-top"><span class="sh-abt-tech-card-icon"><i
+                                class="bi bi-cpu"></i></span><span class="sh-abt-tech-card-number">01 / SYSTEM</span>
+                    </div>
+                    <h3>Intelligent Integration</h3>
+                    <p>Designed around compatible devices and a coordinated approach to connected living.</p>
+                    <div class="sh-abt-tech-card-line"><span></span></div>
+                </article>
+                <article class="sh-abt-tech-card">
+                    <div class="sh-abt-tech-card-top"><span class="sh-abt-tech-card-icon"><i
+                                class="bi bi-activity"></i></span><span class="sh-abt-tech-card-number">02 /
+                            INSIGHT</span></div>
+                    <h3>Responsive Automation</h3>
+                    <p>Explore routines that can help everyday tasks fit naturally into your lifestyle.</p>
+                    <div class="sh-abt-tech-card-line"><span></span></div>
+                </article>
+                <article class="sh-abt-tech-card">
+                    <div class="sh-abt-tech-card-top"><span class="sh-abt-tech-card-icon"><i
+                                class="bi bi-phone"></i></span><span class="sh-abt-tech-card-number">03 / CONTROL</span>
+                    </div>
+                    <h3>Human-Centred Design</h3>
+                    <p>Clear interfaces and accessible controls make connected technology easier to navigate.</p>
+                    <div class="sh-abt-tech-card-line"><span></span></div>
+                </article>
+                <article class="sh-abt-tech-card">
+                    <div class="sh-abt-tech-card-top"><span class="sh-abt-tech-card-icon"><i
+                                class="bi bi-shield-lock"></i></span><span class="sh-abt-tech-card-number">04 /
+                            TRUST</span></div>
+                    <h3>Security by Design</h3>
+                    <p>Consider privacy, access management, and secure configuration from the start.</p>
+                    <div class="sh-abt-tech-card-line"><span></span></div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!--- Our Smart Technology Section End --->
+
+    <!--- Footer Component --->
+    <div id="sh-footer-component"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/all-hero.js"></script>
+</body>
+
+</html>

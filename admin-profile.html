@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111719">
+    <title>My Profile | Stackly Smart Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body class="sh-dashboard-body">
+    <!--- Dashboard Layout --->
+    <div class="sh-dashboard-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sh-dashboard-overlay" id="sh-dashboard-overlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="sh-dashboard-sidebar" id="sh-dashboard-sidebar" aria-label="Dashboard navigation">
+            <a class="sh-dashboard-brand" href="admin-dashboard.html">
+                <span class="sh-dashboard-brand-icon"><i class="bi bi-house-gear-fill"></i></span>
+                <span class="sh-dashboard-brand-text">STACKLY<span>SMART HOME</span></span>
+                <button type="button" class="sh-dashboard-close" id="sh-dashboard-close" aria-label="Close navigation">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </a>
+
+            <!--- Mobile Account Details --->
+            <div class="sh-dashboard-mobile-user">
+                <img src="assets/images/profile-1.webp" alt="Profile" class="sh-dashboard-avatar sh-dashboard-avatar-mobile">
+                <div class="sh-dashboard-user-details">
+                    <span class="sh-dashboard-user-label">SIGNED IN AS</span>
+                    <span class="sh-dashboard-sidebar-email" data-sh-user-email>Loading account...</span>
+                    <span class="sh-dashboard-user-role" data-sh-user-role>Smart Home User</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <div class="sh-dashboard-nav-heading">WORKSPACE</div>
+            <nav class="sh-dashboard-nav">
+                <a href="admin-dashboard.html" class="sh-dashboard-nav-link" data-sh-nav="dashboard">
+                    <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+                </a>
+                <a href="admin-products.html" class="sh-dashboard-nav-link" data-sh-nav="devices">
+                    <i class="bi bi-cpu"></i><span>Products</span>
+                </a>
+                <a href="admin-analytics.html" class="sh-dashboard-nav-link" data-sh-nav="analytics">
+                    <i class="bi bi-graph-up-arrow"></i><span>Analytics</span>
+                </a>
+                <a href="admin-profile.html" class="sh-dashboard-nav-link is-active" data-sh-nav="profile" aria-current="page">
+                    <i class="bi bi-person-circle"></i><span>Profile</span>
+                </a>
+            </nav>
+
+            <!--- Sidebar Bottom --->
+            <div class="sh-dashboard-sidebar-bottom">
+                <div class="sh-dashboard-status">
+                    <span class="sh-dashboard-status-dot"></span>
+                    <span>Smart home workspace</span>
+                </div>
+                <button type="button" class="sh-dashboard-nav-link sh-dashboard-logout" id="sh-dashboard-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="sh-dashboard-main">
+            <!--- Topbar --->
+            <header class="sh-dashboard-topbar">
+                <div class="sh-dashboard-topbar-left">
+                    <button type="button" class="sh-dashboard-menu-toggle" id="sh-dashboard-menu-toggle" aria-label="Open navigation" aria-controls="sh-dashboard-sidebar" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="sh-dashboard-page-heading">
+                        <span class="sh-dashboard-page-eyebrow">SMART HOME CONTROL CENTER</span>
+                        <h1 class="sh-dashboard-page-title" id="sh-dashboard-page-title">Profile</h1>
+                    </div>
+                </div>
+
+                <!--- Topbar Account --->
+                <div class="sh-dashboard-topbar-right">
+                    <div class="sh-dashboard-topbar-account">
+                        <span class="sh-dashboard-topbar-email" data-sh-user-email>Loading account...</span>
+                        <span class="sh-dashboard-topbar-status"><span></span> Account active</span>
+                    </div>
+                    <button type="button" class="sh-dashboard-profile-button" id="sh-dashboard-profile-button" aria-label="Open profile" title="Open profile">
+                        <img src="assets/images/profile-1.webp" alt="Profile" class="sh-dashboard-avatar">
+                    </button>
+                </div>
+            </header>
+
+            <!--- Profile Content --->
+            <main class="sh-dashboard-content">
+                <section class="sh-admin-profile">
+                    <!--- Page Heading --->
+                    <div class="sh-admin-profile-heading">
+                        <div>
+                            <span class="sh-admin-profile-eyebrow">ACCOUNT SETTINGS</span>
+                            <h2>My Profile</h2>
+                            <p>Manage your personal and account information.</p>
+                        </div>
+                        <span class="sh-admin-profile-status"><span></span> Active Account</span>
+                    </div>
+
+                    <!--- Profile Summary --->
+                    <article class="sh-admin-profile-card sh-admin-profile-summary">
+                        <div class="sh-admin-profile-cover"></div>
+                        <div class="sh-admin-profile-summary-content">
+                            <div class="sh-admin-profile-avatar">
+                                <img src="assets/images/profile-1.webp" alt="Profile picture">
+                                <span></span>
+                            </div>
+                            <div class="sh-admin-profile-identity">
+                                <span class="sh-admin-profile-label">REGISTERED USER</span>
+                                <h3 id="sh-admin-profile-name">Loading name...</h3>
+                                <p id="sh-admin-profile-email">Loading email...</p>
+                            </div>
+                            <span class="sh-admin-profile-role" id="sh-admin-profile-role">
+                                <i class="bi bi-shield-check"></i> Admin
+                            </span>
+                        </div>
+                    </article>
+
+                    <!--- Personal Information --->
+                    <article class="sh-admin-profile-card sh-admin-profile-information">
+                        <div class="sh-admin-profile-card-heading">
+                            <div>
+                                <h3><i class="bi bi-person-vcard"></i> Personal Information</h3>
+                                <p>Your details provided during registration.</p>
+                            </div>
+                            <span class="sh-admin-profile-tag">PERSONAL</span>
+                        </div>
+
+                        <div class="sh-admin-profile-details">
+                            <div class="sh-admin-profile-detail">
+                                <span class="sh-admin-profile-detail-icon"><i class="bi bi-person"></i></span>
+                                <div><span>Full Name</span><strong id="sh-admin-profile-detail-name">—</strong></div>
+                            </div>
+                            <div class="sh-admin-profile-detail">
+                                <span class="sh-admin-profile-detail-icon"><i class="bi bi-telephone"></i></span>
+                                <div><span>Phone Number</span><strong id="sh-admin-profile-phone">—</strong></div>
+                            </div>
+                            <div class="sh-admin-profile-detail">
+                                <span class="sh-admin-profile-detail-icon"><i class="bi bi-envelope"></i></span>
+                                <div><span>Email Address</span><strong id="sh-admin-profile-detail-email">—</strong></div>
+                            </div>
+                            <div class="sh-admin-profile-detail">
+                                <span class="sh-admin-profile-detail-icon"><i class="bi bi-shield-check"></i></span>
+                                <div><span>Account Role</span><strong id="sh-admin-profile-detail-role">—</strong></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--- Security Settings --->
+                    <article class="sh-admin-profile-card sh-admin-profile-security">
+                        <div class="sh-admin-profile-security-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <div class="sh-admin-profile-security-copy">
+                            <h3>Password &amp; Security</h3>
+                            <p>Need to change your password? Continue to the password settings page.</p>
+                        </div>
+                        <a href="404.html" class="sh-admin-profile-password-btn">
+                            <i class="bi bi-key"></i>
+                            <span>Change Password</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!--- Scripts --->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-profile.js"></script>
+</body>
+</html>

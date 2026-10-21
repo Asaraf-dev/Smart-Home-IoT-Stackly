@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111719">
+    <title>Dashboard | Stackly Smart Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="sh-dashboard-body">
+    <!--- Dashboard Layout --->
+    <div class="sh-dashboard-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sh-dashboard-overlay" id="sh-dashboard-overlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="sh-dashboard-sidebar" id="sh-dashboard-sidebar" aria-label="Dashboard navigation">
+            <!--- Sidebar Logo --->
+            <a class="sh-dashboard-brand">
+                <span class="sh-dashboard-brand-icon"><i class="bi bi-house-gear-fill"></i></span>
+                <span class="sh-dashboard-brand-text"> STACKLY<span>SMART HOME</span></span>
+                <button type="button" class="sh-dashboard-close" id="sh-dashboard-close" aria-label="Close navigation">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </a>
+
+            <!--- Mobile Account Details --->
+            <div class="sh-dashboard-mobile-user">
+                <img src="assets/images/profile-2.webp" alt="Profile"
+                    class="sh-dashboard-avatar sh-dashboard-avatar-mobile">
+                <div class="sh-dashboard-user-details">
+                    <span class="sh-dashboard-user-label">SIGNED IN AS</span>
+                    <span class="sh-dashboard-sidebar-email" data-sh-user-email>Loading account...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <div class="sh-dashboard-nav-heading">WORKSPACE</div>
+            <nav class="sh-dashboard-nav">
+                <a href="client-dashboard.html" class="sh-dashboard-nav-link" data-sh-nav="dashboard">
+                    <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+                </a>
+                <a href="client-devices.html" class="sh-dashboard-nav-link" data-sh-nav="devices">
+                    <i class="bi bi-lightbulb"></i><span>My Devices</span>
+                </a>
+                <a href="client-analytics.html" class="sh-dashboard-nav-link is-active" data-sh-nav="analytics">
+                    <i class="bi bi-graph-up-arrow"></i><span>Analytics</span>
+                </a>
+                <a href="client-profile.html" class="sh-dashboard-nav-link" data-sh-nav="profile">
+                    <i class="bi bi-person-circle"></i><span>Profile</span>
+                </a>
+            </nav>
+
+            <!--- Sidebar Bottom --->
+            <div class="sh-dashboard-sidebar-bottom">
+                <div class="sh-dashboard-status">
+                    <span class="sh-dashboard-status-dot"></span>
+                    <span>Smart home workspace</span>
+                </div>
+                <button type="button" class="sh-dashboard-nav-link sh-dashboard-logout" id="sh-dashboard-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="sh-dashboard-main">
+            <!--- Topbar --->
+            <header class="sh-dashboard-topbar">
+                <div class="sh-dashboard-topbar-left">
+                    <button type="button" class="sh-dashboard-menu-toggle" id="sh-dashboard-menu-toggle"
+                        aria-label="Open navigation" aria-controls="sh-dashboard-sidebar" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="sh-dashboard-page-heading">
+                        <span class="sh-dashboard-page-eyebrow">SMART HOME CONTROL CENTER</span>
+                        <h1 class="sh-dashboard-page-title" id="sh-dashboard-page-title">Dashboard</h1>
+                    </div>
+                </div>
+
+                <!--- Desktop And Tablet Account --->
+                <div class="sh-dashboard-topbar-right">
+                    <div class="sh-dashboard-topbar-account">
+                        <span class="sh-dashboard-topbar-email" data-sh-user-email>Loading account...</span>
+                        <span class="sh-dashboard-topbar-status"><span></span> Account active</span>
+                    </div>
+                    <button type="button" class="sh-dashboard-profile-button" id="sh-dashboard-profile-button"
+                        aria-label="Open profile" title="Open profile">
+                        <img src="assets/images/profile-2.webp" alt="Profile" class="sh-dashboard-avatar">
+                    </button>
+                </div>
+            </header>
+
+
+            <!--- Client Analytics --->
+            <main class="sh-dashboard-content">
+                <section class="sh-client-analytics" id="sh-client-analytics">
+
+                    <!--- Analytics Header --->
+                    <div class="sh-ca-heading">
+                        <div>
+                            <span class="sh-ca-eyebrow">SMART HOME INSIGHTS</span>
+                            <h2>Energy &amp; Device Analytics</h2>
+                            <p>Understand your home's energy usage and connected device activity.</p>
+                        </div>
+                        <div class="sh-ca-heading-actions">
+                            <select id="sh-ca-period" aria-label="Analytics time period">
+                                <option value="7">Last 7 days</option>
+                                <option value="30">Last 30 days</option>
+                                <option value="90">Last 90 days</option>
+                            </select>
+                            <button type="button" id="sh-ca-export" class="sh-ca-export-btn">
+                                <i class="bi bi-download"></i> Export CSV
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--- Analytics Summary Cards --->
+                    <div class="sh-ca-stats">
+                        <article class="sh-ca-stat-card">
+                            <div class="sh-ca-stat-top">
+                                <span>Energy Used Today</span>
+                                <span class="sh-ca-stat-icon"><i class="bi bi-lightning-charge"></i></span>
+                            </div>
+                            <div class="sh-ca-stat-value"><span id="sh-ca-energy-today">4.8</span><small> kWh</small>
+                            </div>
+                            <div class="sh-ca-stat-foot"><i class="bi bi-graph-down-arrow"></i><span
+                                    id="sh-ca-energy-change">12% less than yesterday</span></div>
+                        </article>
+                        <article class="sh-ca-stat-card">
+                            <div class="sh-ca-stat-top">
+                                <span>Period Consumption</span>
+                                <span class="sh-ca-stat-icon"><i class="bi bi-activity"></i></span>
+                            </div>
+                            <div class="sh-ca-stat-value"><span id="sh-ca-energy-total">34.6</span><small> kWh</small>
+                            </div>
+                            <div class="sh-ca-stat-foot"><i class="bi bi-calendar3"></i><span
+                                    id="sh-ca-period-label">Last 7 days</span></div>
+                        </article>
+                        <article class="sh-ca-stat-card">
+                            <div class="sh-ca-stat-top">
+                                <span>Average Daily Usage</span>
+                                <span class="sh-ca-stat-icon"><i class="bi bi-bar-chart"></i></span>
+                            </div>
+                            <div class="sh-ca-stat-value"><span id="sh-ca-average">4.94</span><small> kWh</small></div>
+                            <div class="sh-ca-stat-foot"><i class="bi bi-clock-history"></i><span>Daily average for
+                                    selected period</span></div>
+                        </article>
+                        <article class="sh-ca-stat-card">
+                            <div class="sh-ca-stat-top">
+                                <span>Device Availability</span>
+                                <span class="sh-ca-stat-icon"><i class="bi bi-wifi"></i></span>
+                            </div>
+                            <div class="sh-ca-stat-value"><span id="sh-ca-availability">83</span><small>%</small></div>
+                            <div class="sh-ca-stat-foot"><i class="bi bi-cpu"></i><span id="sh-ca-online-summary">5 of 6
+                                    devices online</span></div>
+                        </article>
+                    </div>
+
+                    <!--- Energy Consumption Chart --->
+                    <div class="sh-ca-main-grid">
+                        <article class="sh-ca-panel sh-ca-energy-panel">
+                            <div class="sh-ca-panel-heading">
+                                <div>
+                                    <h3>Energy Consumption</h3>
+                                    <p>Estimated usage across the selected period</p>
+                                </div>
+                                <span class="sh-ca-panel-icon"><i class="bi bi-lightning-charge"></i></span>
+                            </div>
+                            <div class="sh-ca-chart-summary">
+                                <div><span>Total usage</span><strong><span id="sh-ca-chart-total">34.6</span>
+                                        <small>kWh</small></strong></div>
+                                <span class="sh-ca-chart-tag">Sample data</span>
+                            </div>
+                            <div class="sh-ca-chart-wrap">
+                                <canvas id="sh-ca-energy-chart" role="img"
+                                    aria-label="Energy consumption chart"></canvas>
+                            </div>
+                            <div class="sh-ca-chart-footer">
+                                <span><i class="sh-ca-legend-dot"></i> Energy consumption (kWh)</span>
+                                <span id="sh-ca-chart-range">Last 7 days</span>
+                            </div>
+                        </article>
+
+                        <!--- Device Status Chart --->
+                        <article class="sh-ca-panel">
+                            <div class="sh-ca-panel-heading">
+                                <div>
+                                    <h3>Device Health</h3>
+                                    <p>Current sample connection status</p>
+                                </div>
+                                <span class="sh-ca-panel-icon"><i class="bi bi-hdd-network"></i></span>
+                            </div>
+                            <div class="sh-ca-health-content">
+                                <div class="sh-ca-donut-wrap">
+                                    <canvas id="sh-ca-device-chart" role="img"
+                                        aria-label="Device status chart"></canvas>
+                                    <div class="sh-ca-donut-center">
+                                        <strong id="sh-ca-device-percent">83%</strong>
+                                        <span>Online</span>
+                                    </div>
+                                </div>
+                                <div class="sh-ca-health-legend">
+                                    <div><span class="sh-ca-health-dot is-online"></span><span>Online
+                                            devices</span><strong id="sh-ca-online-count">5</strong></div>
+                                    <div><span class="sh-ca-health-dot is-offline"></span><span>Offline
+                                            devices</span><strong id="sh-ca-offline-count">1</strong></div>
+                                    <div><span class="sh-ca-health-dot is-total"></span><span>Total
+                                            devices</span><strong id="sh-ca-device-total">6</strong></div>
+                                </div>
+                            </div>
+                            <div class="sh-ca-health-note"><i class="bi bi-info-circle"></i> Availability is
+                                illustrative and does not reflect live device connectivity.</div>
+                        </article>
+                    </div>
+
+                    <!--- Usage And Activity Panels --->
+                    <div class="sh-ca-bottom-grid">
+                        <article class="sh-ca-panel">
+                            <div class="sh-ca-panel-heading">
+                                <div>
+                                    <h3>Usage by Device</h3>
+                                    <p>Illustrative energy contribution by device</p>
+                                </div>
+                                <span class="sh-ca-panel-icon"><i class="bi bi-sliders"></i></span>
+                            </div>
+                            <div class="sh-ca-device-usage" id="sh-ca-usage-list"></div>
+                        </article>
+
+                        <article class="sh-ca-panel">
+                            <div class="sh-ca-panel-heading">
+                                <div>
+                                    <h3>Recent Activity</h3>
+                                    <p>Example smart home events</p>
+                                </div>
+                                <span class="sh-ca-panel-icon"><i class="bi bi-clock-history"></i></span>
+                            </div>
+                            <div class="sh-ca-activity-list" id="sh-ca-activity-list"></div>
+                        </article>
+                    </div>
+
+                    <!--- Analytics Information --->
+                    <div class="sh-ca-notice">
+                        <i class="bi bi-info-circle"></i>
+                        <p>Analytics shown here are sample values for interface demonstration. Accurate consumption,
+                            uptime, and activity reports require IoT devices and a connected backend to send real data.
+                        </p>
+                    </div>
+                </section>
+            </main>
+            <!--- End Client Analytics -->
+
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-analytics.js"></script>
+
+</body>
+
+</html>

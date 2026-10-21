@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111719">
+    <title>Dashboard | Stackly Smart Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="sh-dashboard-body">
+    <!--- Dashboard Layout --->
+    <div class="sh-dashboard-layout">
+        <!--- Sidebar Overlay --->
+        <div class="sh-dashboard-overlay" id="sh-dashboard-overlay"></div>
+
+        <!--- Sidebar --->
+        <aside class="sh-dashboard-sidebar" id="sh-dashboard-sidebar" aria-label="Dashboard navigation">
+            <!--- Sidebar Logo --->
+            <a class="sh-dashboard-brand">
+                <span class="sh-dashboard-brand-icon"><i class="bi bi-house-gear-fill"></i></span>
+                <span class="sh-dashboard-brand-text"> STACKLY<span>SMART HOME</span></span>
+                <button type="button" class="sh-dashboard-close" id="sh-dashboard-close" aria-label="Close navigation">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </a>
+
+            <!--- Mobile Account Details --->
+            <div class="sh-dashboard-mobile-user">
+                <img src="assets/images/profile-2.webp" alt="Profile"
+                    class="sh-dashboard-avatar sh-dashboard-avatar-mobile">
+                <div class="sh-dashboard-user-details">
+                    <span class="sh-dashboard-user-label">SIGNED IN AS</span>
+                    <span class="sh-dashboard-sidebar-email" data-sh-user-email>Loading account...</span>
+                </div>
+            </div>
+
+            <!--- Sidebar Navigation --->
+            <div class="sh-dashboard-nav-heading">WORKSPACE</div>
+            <nav class="sh-dashboard-nav">
+                <a href="client-dashboard.html" class="sh-dashboard-nav-link is-active" data-sh-nav="dashboard">
+                    <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+                </a>
+                <a href="client-devices.html" class="sh-dashboard-nav-link" data-sh-nav="devices">
+                    <i class="bi bi-lightbulb"></i><span>My Devices</span>
+                </a>
+                <a href="client-analytics.html" class="sh-dashboard-nav-link" data-sh-nav="analytics">
+                    <i class="bi bi-graph-up-arrow"></i><span>Analytics</span>
+                </a>
+                <a href="client-profile.html" class="sh-dashboard-nav-link" data-sh-nav="profile">
+                    <i class="bi bi-person-circle"></i><span>Profile</span>
+                </a>
+            </nav>
+
+            <!--- Sidebar Bottom --->
+            <div class="sh-dashboard-sidebar-bottom">
+                <div class="sh-dashboard-status">
+                    <span class="sh-dashboard-status-dot"></span>
+                    <span>Smart home workspace</span>
+                </div>
+                <button type="button" class="sh-dashboard-nav-link sh-dashboard-logout" id="sh-dashboard-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!--- Main Area --->
+        <div class="sh-dashboard-main">
+            <!--- Topbar --->
+            <header class="sh-dashboard-topbar">
+                <div class="sh-dashboard-topbar-left">
+                    <button type="button" class="sh-dashboard-menu-toggle" id="sh-dashboard-menu-toggle"
+                        aria-label="Open navigation" aria-controls="sh-dashboard-sidebar" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="sh-dashboard-page-heading">
+                        <span class="sh-dashboard-page-eyebrow">SMART HOME CONTROL CENTER</span>
+                        <h1 class="sh-dashboard-page-title" id="sh-dashboard-page-title">Dashboard</h1>
+                    </div>
+                </div>
+
+                <!--- Desktop And Tablet Account --->
+                <div class="sh-dashboard-topbar-right">
+                    <div class="sh-dashboard-topbar-account">
+                        <span class="sh-dashboard-topbar-email" data-sh-user-email>Loading account...</span>
+                        <span class="sh-dashboard-topbar-status"><span></span> Account active</span>
+                    </div>
+                    <button type="button" class="sh-dashboard-profile-button" id="sh-dashboard-profile-button"
+                        aria-label="Open profile" title="Open profile">
+                        <img src="assets/images/profile-2.webp" alt="Profile" class="sh-dashboard-avatar">
+                    </button>
+                </div>
+            </header>
+
+            <!--- Client Overview Content --->
+            <main class="sh-dashboard-content">
+                <section class="sh-client-overview" id="sh-client-overview">
+
+                    <!--- Welcome Heading --->
+                    <div class="sh-client-welcome">
+                        <div>
+                            <span class="sh-client-eyebrow">YOUR SMART HOME AT A GLANCE</span>
+                            <h2>Welcome back, <span id="sh-client-name">there</span></h2>
+                            <p>Manage your connected home, monitor energy usage, and check your device status.</p>
+                        </div>
+                        <div class="sh-client-live-status">
+                            <span></span>
+                            Smart Home Connected
+                        </div>
+                    </div>
+
+                    <!--- Overview Statistics --->
+                    <div class="sh-client-stats">
+                        <article class="sh-client-stat-card">
+                            <div class="sh-client-stat-top">
+                                <span class="sh-client-stat-label">My Devices</span>
+                                <span class="sh-client-stat-icon"><i class="bi bi-cpu"></i></span>
+                            </div>
+                            <div class="sh-client-stat-value" id="sh-client-device-total">6</div>
+                            <div class="sh-client-stat-foot"><i class="bi bi-house-check"></i> Registered devices
+                            </div>
+                        </article>
+
+                        <article class="sh-client-stat-card">
+                            <div class="sh-client-stat-top">
+                                <span class="sh-client-stat-label">Devices Online</span>
+                                <span class="sh-client-stat-icon"><i class="bi bi-wifi"></i></span>
+                            </div>
+                            <div class="sh-client-stat-value" id="sh-client-device-online">5</div>
+                            <div class="sh-client-stat-foot"><span class="sh-client-status-dot"></span> Currently
+                                online</div>
+                        </article>
+
+                        <article class="sh-client-stat-card">
+                            <div class="sh-client-stat-top">
+                                <span class="sh-client-stat-label">Energy Today</span>
+                                <span class="sh-client-stat-icon"><i class="bi bi-lightning-charge"></i></span>
+                            </div>
+                            <div class="sh-client-stat-value"><span id="sh-client-energy-today">4.8</span><small>
+                                    kWh</small></div>
+                            <div class="sh-client-stat-foot"><i class="bi bi-activity"></i> Illustrative usage</div>
+                        </article>
+
+                        <article class="sh-client-stat-card">
+                            <div class="sh-client-stat-top">
+                                <span class="sh-client-stat-label">Automation</span>
+                                <span class="sh-client-stat-icon"><i class="bi bi-robot"></i></span>
+                            </div>
+                            <div class="sh-client-stat-value" id="sh-client-automation-total">3</div>
+                            <div class="sh-client-stat-foot"><i class="bi bi-clock-history"></i> Demo routines</div>
+                        </article>
+                    </div>
+
+                    <!--- Main Overview Grid --->
+                    <div class="sh-client-main-grid">
+
+                        <!--- Energy Usage --->
+                        <article class="sh-client-panel sh-client-energy-panel">
+                            <div class="sh-client-panel-heading">
+                                <div>
+                                    <h3>Energy Overview</h3>
+                                    <p>Your estimated energy consumption</p>
+                                </div>
+                                <span class="sh-client-panel-icon"><i class="bi bi-lightning-charge"></i></span>
+                            </div>
+
+                            <div class="sh-client-energy-summary">
+                                <div>
+                                    <span class="sh-client-muted-label">Today's usage</span>
+                                    <strong><span id="sh-client-energy-total">4.8</span> <small>kWh</small></strong>
+                                </div>
+                                <span class="sh-client-demo-badge">Demo data</span>
+                            </div>
+
+                            <div class="sh-client-chart" role="img" aria-label="Illustrative energy usage by day">
+                                <div class="sh-client-chart-y-axis">
+                                    <span>6 kWh</span>
+                                    <span>4 kWh</span>
+                                    <span>2 kWh</span>
+                                    <span>0</span>
+                                </div>
+                                <div class="sh-client-chart-area">
+                                    <div class="sh-client-chart-grid">
+                                        <span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="sh-client-bars" id="sh-client-energy-bars">
+                                        <div class="sh-client-bar-item">
+                                            <div class="sh-client-bar" style="height:45%"></div><span>Mon</span>
+                                        </div>
+                                        <div class="sh-client-bar-item">
+                                            <div class="sh-client-bar" style="height:65%"></div><span>Tue</span>
+                                        </div>
+                                        <div class="sh-client-bar-item">
+                                            <div class="sh-client-bar" style="height:52%"></div><span>Wed</span>
+                                        </div>
+                                        <div class="sh-client-bar-item">
+                                            <div class="sh-client-bar" style="height:78%"></div><span>Thu</span>
+                                        </div>
+                                        <div class="sh-client-bar-item">
+                                            <div class="sh-client-bar" style="height:58%"></div><span>Fri</span>
+                                        </div>
+                                        <div class="sh-client-bar-item">
+                                            <div class="sh-client-bar" style="height:88%"></div><span>Sat</span>
+                                        </div>
+                                        <div class="sh-client-bar-item">
+                                            <div class="sh-client-bar sh-client-bar-today" style="height:68%"></div>
+                                            <span>Sun</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sh-client-energy-footer">
+                                <span><i class="bi bi-info-circle"></i> Sample weekly readings</span>
+                                <a href="404.html">View analytics <i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!--- Device Health --->
+                        <article class="sh-client-panel sh-client-device-panel">
+                            <div class="sh-client-panel-heading">
+                                <div>
+                                    <h3>Device Health</h3>
+                                    <p>Overview of your connected devices</p>
+                                </div>
+                                <a href="404.html" class="sh-client-text-link">View all <i
+                                        class="bi bi-arrow-up-right"></i></a>
+                            </div>
+
+                            <div class="sh-client-device-health">
+                                <div class="sh-client-health-ring">
+                                    <div class="sh-client-health-ring-inner">
+                                        <strong id="sh-client-health-percent">83%</strong>
+                                        <span>Online</span>
+                                    </div>
+                                </div>
+                                <div class="sh-client-health-legend">
+                                    <div><span
+                                            class="sh-client-legend-dot sh-client-legend-online"></span><span>Online</span><strong
+                                            id="sh-client-health-online">5</strong></div>
+                                    <div><span
+                                            class="sh-client-legend-dot sh-client-legend-offline"></span><span>Offline</span><strong
+                                            id="sh-client-health-offline">1</strong></div>
+                                    <div><span class="sh-client-legend-dot sh-client-legend-total"></span><span>Total
+                                            devices</span><strong id="sh-client-health-total">6</strong></div>
+                                </div>
+                            </div>
+
+                            <div class="sh-client-device-notice">
+                                <i class="bi bi-shield-check"></i>
+                                <span>Device health is illustrative until live device data is connected.</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!--- Devices And Activity Grid --->
+                    <div class="sh-client-bottom-grid">
+
+                        <!--- Favorite Devices --->
+                        <article class="sh-client-panel">
+                            <div class="sh-client-panel-heading">
+                                <div>
+                                    <h3>My Devices</h3>
+                                    <p>Quick access to your smart devices</p>
+                                </div>
+                                <a href="404.html" class="sh-client-text-link">Manage <i
+                                        class="bi bi-arrow-up-right"></i></a>
+                            </div>
+
+                            <div class="sh-client-device-list">
+                                <div class="sh-client-device-row">
+                                    <span class="sh-client-device-icon"><i class="bi bi-lightbulb"></i></span>
+                                    <div class="sh-client-device-info"><strong>Living Room
+                                            Lights</strong><span>Lighting · Demo device</span></div>
+                                    <span class="sh-client-device-state is-online"><span></span> Online</span>
+                                </div>
+                                <div class="sh-client-device-row">
+                                    <span class="sh-client-device-icon"><i class="bi bi-snow"></i></span>
+                                    <div class="sh-client-device-info"><strong>Smart Air
+                                            Conditioner</strong><span>Climate · Demo device</span></div>
+                                    <span class="sh-client-device-state is-online"><span></span> Online</span>
+                                </div>
+                                <div class="sh-client-device-row">
+                                    <span class="sh-client-device-icon"><i class="bi bi-camera-video"></i></span>
+                                    <div class="sh-client-device-info"><strong>Security
+                                            Camera</strong><span>Security · Demo device</span></div>
+                                    <span class="sh-client-device-state is-online"><span></span> Online</span>
+                                </div>
+                                <div class="sh-client-device-row">
+                                    <span class="sh-client-device-icon"><i class="bi bi-router"></i></span>
+                                    <div class="sh-client-device-info"><strong>Smart Plug</strong><span>Power · Demo
+                                            device</span></div>
+                                    <span class="sh-client-device-state is-offline"><span></span> Offline</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--- Quick Actions And Activity --->
+                        <div class="sh-client-side-stack">
+
+                            <!--- Quick Actions --->
+                            <article class="sh-client-panel">
+                                <div class="sh-client-panel-heading">
+                                    <div>
+                                        <h3>Quick Actions</h3>
+                                        <p>Go directly to a workspace</p>
+                                    </div>
+                                </div>
+                                <div class="sh-client-quick-actions">
+                                    <a href="client-devices.html" class="sh-client-action">
+                                        <span><i class="bi bi-cpu"></i></span>
+                                        <div><strong>My Devices</strong><small>Manage connected devices</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="client-analytics.html" class="sh-client-action">
+                                        <span><i class="bi bi-bar-chart-line"></i></span>
+                                        <div><strong>Energy Analytics</strong><small>Review usage reports</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                    <a href="client-profile.html" class="sh-client-action">
+                                        <span><i class="bi bi-person-gear"></i></span>
+                                        <div><strong>My Profile</strong><small>View account information</small>
+                                        </div>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!--- Recent Activity --->
+                            <article class="sh-client-panel">
+                                <div class="sh-client-panel-heading">
+                                    <div>
+                                        <h3>Recent Activity</h3>
+                                        <p>Example smart home events</p>
+                                    </div>
+                                    <span class="sh-client-panel-icon"><i class="bi bi-activity"></i></span>
+                                </div>
+                                <div class="sh-client-activity-list">
+                                    <div class="sh-client-activity">
+                                        <span class="sh-client-activity-icon"><i class="bi bi-lightbulb"></i></span>
+                                        <div><strong>Living Room Lights</strong>
+                                            <p>Device status: Online</p>
+                                        </div>
+                                        <span class="sh-client-activity-time">Demo</span>
+                                    </div>
+                                    <div class="sh-client-activity">
+                                        <span class="sh-client-activity-icon"><i class="bi bi-snow"></i></span>
+                                        <div><strong>Air Conditioner</strong>
+                                            <p>Device status: Online</p>
+                                        </div>
+                                        <span class="sh-client-activity-time">Demo</span>
+                                    </div>
+                                    <div class="sh-client-activity">
+                                        <span class="sh-client-activity-icon"><i class="bi bi-router"></i></span>
+                                        <div><strong>Smart Plug</strong>
+                                            <p>Device status: Offline</p>
+                                        </div>
+                                        <span class="sh-client-activity-time">Demo</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!--- Demo Data Notice --->
+                    <div class="sh-client-demo-notice">
+                        <i class="bi bi-info-circle"></i>
+                        <span>This overview currently uses sample device and energy data. It does not control real
+                            hardware or measure actual electricity consumption.</span>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/client-overview.js"></script>
+</body>
+
+</html>

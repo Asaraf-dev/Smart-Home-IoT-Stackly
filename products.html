@@ -1,0 +1,339 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Smart Home IoT Platform</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div class="sh-ldr-main" id="sh-ldr-main" role="status" aria-label="Loading Stackly">
+        <!--- Loader Background --->
+        <div class="sh-ldr-grid"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-one"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-two"></div>
+        <div class="sh-ldr-particles" id="sh-ldr-particles"></div>
+        <!--- Loader Content --->
+        <div class="sh-ldr-content">
+            <!--- Animated Smart Home Icon --->
+            <div class="sh-ldr-visual">
+                <div class="sh-ldr-orbit sh-ldr-orbit-one"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-two"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-three"></div>
+                <div class="sh-ldr-icon-wrap">
+                    <i class="bi bi-house-gear sh-ldr-house-icon"></i>
+                    <span class="sh-ldr-icon-dot"></span>
+                </div>
+                <span class="sh-ldr-signal sh-ldr-signal-one"></span>
+                <span class="sh-ldr-signal sh-ldr-signal-two"></span>
+            </div>
+            <!--- Brand --->
+            <a href="index.html" class="sh-ldr-brand" aria-label="Stackly home">stackly<span>.</span></a>
+            <p class="sh-ldr-tagline">INTELLIGENT LIVING</p>
+            <!--- Loading Message --->
+            <div class="sh-ldr-message-wrap">
+                <span class="sh-ldr-status-dot"></span>
+                <p class="sh-ldr-message" id="sh-ldr-message">Connecting your smart experience...</p>
+            </div>
+            <!--- Decorative Signal --->
+            <div class="sh-ldr-signal-line"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <!--- Loader Footer --->
+        <div class="sh-ldr-footer">
+            <span>SMARTER SPACES. SIMPLER LIVING.</span>
+            <span class="sh-ldr-footer-status"><i class="bi bi-shield-check"></i> SYSTEM INITIALIZING</span>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- Navbar Component --->
+    <div id="sh-navbar-component"></div>
+
+    <!--- Page Hero Container --->
+    <div id="sh-page-hero-component" data-page="products"></div>
+
+    <!--- All Products Catalogue Section Start --->
+    <section class="sh-prd-catalog" id="sh-prd-catalog">
+        <div class="container">
+            <!--- Catalogue Heading --->
+            <div class="sh-prd-catalog-heading">
+                <div>
+                    <span class="sh-prd-catalog-eyebrow"><span></span> THE STACKLY COLLECTION</span>
+                    <h2>Explore Smart <span>Products.</span></h2>
+                    <p>Discover connected devices designed to bring more comfort, control, and intelligence into your
+                        everyday life.</p>
+                </div>
+                <div class="sh-prd-catalog-total"><strong id="sh-prd-catalog-total">12</strong><span>SMART
+                        PRODUCTS</span></div>
+            </div>
+            <!--- Catalogue Toolbar --->
+            <div class="sh-prd-catalog-toolbar">
+                <div class="sh-prd-catalog-search">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="sh-prd-catalog-search" placeholder="Search smart products..."
+                        aria-label="Search products" autocomplete="off">
+                    <button type="button" id="sh-prd-catalog-search-clear" aria-label="Clear search" hidden><i
+                            class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="sh-prd-catalog-sort">
+                    <label for="sh-prd-catalog-sort">Sort by</label>
+                    <select id="sh-prd-catalog-sort" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <!--- Category Filters --->
+            <div class="sh-prd-catalog-categories" id="sh-prd-catalog-categories"
+                aria-label="Filter products by category">
+                <button type="button" class="sh-prd-catalog-category active" data-category="all" aria-pressed="true">All
+                    Products <span>12</span></button>
+                <button type="button" class="sh-prd-catalog-category" data-category="lighting"
+                    aria-pressed="false">Smart Lighting</button>
+                <button type="button" class="sh-prd-catalog-category" data-category="security" aria-pressed="false">Home
+                    Security</button>
+                <button type="button" class="sh-prd-catalog-category" data-category="climate"
+                    aria-pressed="false">Climate Control</button>
+                <button type="button" class="sh-prd-catalog-category" data-category="sensors" aria-pressed="false">Smart
+                    Sensors</button>
+                <button type="button" class="sh-prd-catalog-category" data-category="automation"
+                    aria-pressed="false">Automation</button>
+            </div>
+            <!--- Results Summary --->
+            <div class="sh-prd-catalog-results">
+                <p id="sh-prd-catalog-results-text" aria-live="polite">Showing 12 products</p>
+                <button type="button" id="sh-prd-catalog-reset" class="sh-prd-catalog-reset" hidden><i
+                        class="bi bi-arrow-counterclockwise"></i> Reset filters</button>
+            </div>
+            <!--- Products Grid --->
+            <div class="sh-prd-catalog-grid" id="sh-prd-catalog-grid" aria-live="polite"></div>
+            <!--- Empty State --->
+            <div class="sh-prd-catalog-empty" id="sh-prd-catalog-empty" hidden>
+                <span><i class="bi bi-search"></i></span>
+                <h3>No products found</h3>
+                <p>Try another search term or choose a different category.</p>
+                <button type="button" id="sh-prd-catalog-empty-reset">Clear Filters</button>
+            </div>
+            <!--- Catalogue Bottom --->
+            <div class="sh-prd-catalog-bottom">
+                <span><i class="bi bi-grid-3x3-gap"></i> Thoughtfully connected living</span>
+                <a href="contact.html">Need help choosing? Talk to us <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- End All Products Catalogue Section --->
+
+    <!--- Product Details Modal --->
+    <div class="modal fade sh-prd-catalog-modal" id="sh-prd-catalog-modal" tabindex="-1"
+        aria-labelledby="sh-prd-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="sh-prd-modal-close" data-bs-dismiss="modal"
+                    aria-label="Close product details"><i class="bi bi-x-lg"></i></button>
+                <div class="sh-prd-modal-body" id="sh-prd-modal-body"></div>
+            </div>
+        </div>
+    </div>
+    <!--- All Products Catalogue Section End --->
+
+    <!--- Compatibility & Connectivity Section Start --->
+    <section class="sh-prd-connect" id="sh-prd-connect">
+        <div class="container">
+            <!--- Section Heading --->
+            <div class="sh-prd-connect-heading">
+                <span class="sh-prd-connect-eyebrow"><span></span> BUILT TO CONNECT</span>
+                <h2>One Home. Different Devices.<br><span>A Smarter Connection.</span></h2>
+                <p>Smart homes work best when devices, networks, and control systems are compatible. Understand the
+                    connection options before choosing your next device.</p>
+            </div>
+            <!--- Connectivity Overview --->
+            <div class="sh-prd-connect-overview">
+                <div class="sh-prd-connect-visual">
+                    <div class="sh-prd-connect-grid"></div>
+                    <div class="sh-prd-connect-glow"></div>
+                    <div class="sh-prd-connect-orbit sh-prd-connect-orbit-one"></div>
+                    <div class="sh-prd-connect-orbit sh-prd-connect-orbit-two"></div>
+                    <svg class="sh-prd-connect-lines" viewBox="0 0 600 470" fill="none" aria-hidden="true">
+                        <path d="M300 235 L135 100 M300 235 L465 100 M300 235 L135 370 M300 235 L465 370" />
+                        <path d="M135 100 L465 100 M135 370 L465 370" class="sh-prd-connect-line-secondary" />
+                        <circle cx="135" cy="100" r="4" />
+                        <circle cx="465" cy="100" r="4" />
+                        <circle cx="135" cy="370" r="4" />
+                        <circle cx="465" cy="370" r="4" />
+                    </svg>
+                    <!--- Central Home Hub --->
+                    <div class="sh-prd-connect-hub">
+                        <div class="sh-prd-connect-hub-icon"><i class="bi bi-house-gear"></i></div>
+                        <strong>STACKLY</strong>
+                        <span>CONNECTED HOME</span>
+                        <div class="sh-prd-connect-hub-status"><span></span> CONNECTION CONCEPT</div>
+                    </div>
+                    <!--- Connected Device Nodes --->
+                    <div class="sh-prd-connect-node sh-prd-connect-node-one">
+                        <span class="sh-prd-connect-node-icon"><i class="bi bi-wifi"></i></span>
+                        <span><strong>Wi-Fi</strong><small>Network access</small></span>
+                    </div>
+                    <div class="sh-prd-connect-node sh-prd-connect-node-two">
+                        <span class="sh-prd-connect-node-icon"><i class="bi bi-broadcast"></i></span>
+                        <span><strong>Zigbee</strong><small>Low-power mesh</small></span>
+                    </div>
+                    <div class="sh-prd-connect-node sh-prd-connect-node-three">
+                        <span class="sh-prd-connect-node-icon"><i class="bi bi-bluetooth"></i></span>
+                        <span><strong>Bluetooth</strong><small>Nearby connections</small></span>
+                    </div>
+                    <div class="sh-prd-connect-node sh-prd-connect-node-four">
+                        <span class="sh-prd-connect-node-icon"><i class="bi bi-diagram-3"></i></span>
+                        <span><strong>Matter</strong><small>Supported ecosystem</small></span>
+                    </div>
+                    <div class="sh-prd-connect-visual-note"><i class="bi bi-info-circle"></i> Actual support depends on
+                        each device.</div>
+                </div>
+                <div class="sh-prd-connect-content">
+                    <span class="sh-prd-connect-label">UNDERSTAND YOUR ECOSYSTEM</span>
+                    <h3>Compatibility comes <span>before connection.</span></h3>
+                    <p>Not every smart device uses the same communication protocol. Checking your existing equipment,
+                        network, and preferred control platform helps you choose devices that work for your setup.</p>
+                    <div class="sh-prd-connect-checks">
+                        <div class="sh-prd-connect-check"><span><i class="bi bi-check2"></i></span>
+                            <div>
+                                <h4>Check Device Requirements</h4>
+                                <p>Confirm the required hub, network, app, and supported protocol.</p>
+                            </div>
+                        </div>
+                        <div class="sh-prd-connect-check"><span><i class="bi bi-check2"></i></span>
+                            <div>
+                                <h4>Review Ecosystem Support</h4>
+                                <p>Verify compatibility with your preferred smart-home platform.</p>
+                            </div>
+                        </div>
+                        <div class="sh-prd-connect-check"><span><i class="bi bi-check2"></i></span>
+                            <div>
+                                <h4>Plan for Your Home</h4>
+                                <p>Consider Wi-Fi coverage, device placement, and network capacity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="404.html" class="sh-prd-connect-cta">Find Compatible Solutions <i
+                            class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <!--- Connectivity Protocol Cards --->
+            <div class="sh-prd-connect-protocols">
+                <article class="sh-prd-connect-card">
+                    <div class="sh-prd-connect-card-top"><span class="sh-prd-connect-card-icon"><i
+                                class="bi bi-wifi"></i></span><span class="sh-prd-connect-card-number">01</span></div>
+                    <h3>Wi-Fi</h3>
+                    <p>Connect compatible smart devices through your home wireless network for network-based control and
+                        communication.</p>
+                    <div class="sh-prd-connect-tags"><span>Wireless Network</span><span>IP Devices</span></div>
+                    <div class="sh-prd-connect-card-footer"><span class="sh-prd-connect-dot"></span> Check router and
+                        device requirements</div>
+                </article>
+                <article class="sh-prd-connect-card">
+                    <div class="sh-prd-connect-card-top"><span class="sh-prd-connect-card-icon"><i
+                                class="bi bi-broadcast"></i></span><span class="sh-prd-connect-card-number">02</span>
+                    </div>
+                    <h3>Zigbee</h3>
+                    <p>A low-power wireless mesh protocol commonly used by compatible sensors, switches, and smart
+                        lighting devices.</p>
+                    <div class="sh-prd-connect-tags"><span>Low Power</span><span>Mesh Network</span></div>
+                    <div class="sh-prd-connect-card-footer"><span class="sh-prd-connect-dot"></span> A compatible
+                        coordinator may be needed</div>
+                </article>
+                <article class="sh-prd-connect-card">
+                    <div class="sh-prd-connect-card-top"><span class="sh-prd-connect-card-icon"><i
+                                class="bi bi-bluetooth"></i></span><span class="sh-prd-connect-card-number">03</span>
+                    </div>
+                    <h3>Bluetooth</h3>
+                    <p>Useful for nearby device connections, setup, and control features supported by compatible
+                        products.</p>
+                    <div class="sh-prd-connect-tags"><span>Nearby Devices</span><span>Easy Setup</span></div>
+                    <div class="sh-prd-connect-card-footer"><span class="sh-prd-connect-dot"></span> Range and features
+                        vary by device</div>
+                </article>
+                <article class="sh-prd-connect-card">
+                    <div class="sh-prd-connect-card-top"><span class="sh-prd-connect-card-icon"><i
+                                class="bi bi-diagram-3"></i></span><span class="sh-prd-connect-card-number">04</span>
+                    </div>
+                    <h3>Matter</h3>
+                    <p>An interoperability standard designed to help supported smart-home devices work across compatible
+                        ecosystems.</p>
+                    <div class="sh-prd-connect-tags"><span>Interoperability</span><span>Multi-Ecosystem</span></div>
+                    <div class="sh-prd-connect-card-footer"><span class="sh-prd-connect-dot"></span> Verify
+                        certification and ecosystem support</div>
+                </article>
+            </div>
+            <!--- Compatibility Note --->
+            <div class="sh-prd-connect-note">
+                <span class="sh-prd-connect-note-icon"><i class="bi bi-shield-check"></i></span>
+                <div><strong>Choose with confidence.</strong>
+                    <p>Connectivity logos and protocol descriptions explain common options, not guaranteed Stackly
+                        product support. Always verify the individual product specifications before purchasing.</p>
+                </div>
+                <a href="404.html">Ask our team <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- Compatibility & Connectivity Section End --->
+
+    <!--- Footer Component --->
+    <div id="sh-footer-component"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/all-hero.js"></script>
+</body>
+
+</html>

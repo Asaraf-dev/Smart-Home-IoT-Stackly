@@ -1,0 +1,272 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Smart Home IoT Platform</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div class="sh-ldr-main" id="sh-ldr-main" role="status" aria-label="Loading Stackly">
+        <!--- Loader Background --->
+        <div class="sh-ldr-grid"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-one"></div>
+        <div class="sh-ldr-glow sh-ldr-glow-two"></div>
+        <div class="sh-ldr-particles" id="sh-ldr-particles"></div>
+        <!--- Loader Content --->
+        <div class="sh-ldr-content">
+            <!--- Animated Smart Home Icon --->
+            <div class="sh-ldr-visual">
+                <div class="sh-ldr-orbit sh-ldr-orbit-one"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-two"></div>
+                <div class="sh-ldr-orbit sh-ldr-orbit-three"></div>
+                <div class="sh-ldr-icon-wrap">
+                    <i class="bi bi-house-gear sh-ldr-house-icon"></i>
+                    <span class="sh-ldr-icon-dot"></span>
+                </div>
+                <span class="sh-ldr-signal sh-ldr-signal-one"></span>
+                <span class="sh-ldr-signal sh-ldr-signal-two"></span>
+            </div>
+            <!--- Brand --->
+            <a href="index.html" class="sh-ldr-brand" aria-label="Stackly home">stackly<span>.</span></a>
+            <p class="sh-ldr-tagline">INTELLIGENT LIVING</p>
+            <!--- Loading Message --->
+            <div class="sh-ldr-message-wrap">
+                <span class="sh-ldr-status-dot"></span>
+                <p class="sh-ldr-message" id="sh-ldr-message">Connecting your smart experience...</p>
+            </div>
+            <!--- Decorative Signal --->
+            <div class="sh-ldr-signal-line"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <!--- Loader Footer --->
+        <div class="sh-ldr-footer">
+            <span>SMARTER SPACES. SIMPLER LIVING.</span>
+            <span class="sh-ldr-footer-status"><i class="bi bi-shield-check"></i> SYSTEM INITIALIZING</span>
+        </div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- Navbar Component --->
+    <div id="sh-navbar-component"></div>
+
+    <!--- Page Hero Container --->
+    <div id="sh-page-hero-component" data-page="blog"></div>
+
+    <!--- Featured Article Section Start --->
+    <section class="sh-blog-featured" id="sh-blog-featured">
+        <div class="container">
+            <!--- Section Heading --->
+            <div class="sh-blog-featured-heading">
+                <div>
+                    <span class="sh-blog-featured-eyebrow"><span></span> EDITOR'S PICK</span>
+                    <h2>Worth Your <span>Attention.</span></h2>
+                </div>
+                <a href="404.html" class="sh-blog-featured-view">Explore All Articles <i
+                        class="bi bi-arrow-up-right"></i></a>
+            </div>
+            <!--- Featured Article Card --->
+            <article class="sh-blog-featured-card">
+                <!--- Featured Image --->
+                <a class="sh-blog-featured-image" aria-label="Read The Complete Guide to Building a Smart Home">
+                    <img src="assets/images/blog-01.webp"
+                        alt="Contemporary living room with thoughtful lighting and modern smart-home design"
+                        loading="lazy">
+                    <span class="sh-blog-featured-image-overlay"></span>
+                    <span class="sh-blog-featured-badge"><i class="bi bi-stars"></i> FEATURED ARTICLE</span>
+                    <span class="sh-blog-featured-image-label"><span></span> SMART LIVING / 01</span>
+                </a>
+                <!--- Featured Content --->
+                <div class="sh-blog-featured-content">
+                    <div class="sh-blog-featured-meta">
+                        <span class="sh-blog-featured-category"><i class="bi bi-house-gear"></i> SMART HOME</span>
+                        <span class="sh-blog-featured-reading"><i class="bi bi-clock"></i> 8 MIN READ</span>
+                    </div>
+                    <span class="sh-blog-featured-overline">YOUR SMART HOME STARTS HERE</span>
+                    <h3><a>The Complete Guide to Building a Smarter
+                            Home</a></h3>
+                    <p class="sh-blog-featured-description">From connected lighting to intelligent security, discover
+                        how to plan a smart home that fits your lifestyle, works with your devices, and makes everyday
+                        routines feel effortless.</p>
+                    <!--- Article Highlights --->
+                    <div class="sh-blog-featured-highlights">
+                        <span><i class="bi bi-check2-circle"></i> Choose compatible devices</span>
+                        <span><i class="bi bi-check2-circle"></i> Plan your connectivity</span>
+                        <span><i class="bi bi-check2-circle"></i> Build useful routines</span>
+                    </div>
+                    <!--- Author and CTA --->
+                    <div class="sh-blog-featured-bottom">
+                        <div class="sh-blog-featured-author">
+                            <span class="sh-blog-featured-author-icon"><i class="bi bi-journal-richtext"></i></span>
+                            <span class="sh-blog-featured-author-info"><strong>Stackly Editorial</strong><small>Smart
+                                    Living Insights</small></span>
+                        </div>
+                        <a href="404.html" class="sh-blog-featured-read">Read Full
+                            Article <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                    <!--- Decorative Index --->
+                    <span class="sh-blog-featured-index" aria-hidden="true">01</span>
+                </div>
+            </article>
+            <!--- Featured Bottom Note --->
+            <div class="sh-blog-featured-footer">
+                <span><i class="bi bi-lightbulb"></i> Practical ideas for more intelligent living.</span>
+                <a href="404.html">Explore Smart Products <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- Featured Article Section End --->
+
+    <!--- All Articles Catalogue Section Start --->
+    <section class="sh-blog-articles" id="sh-blog-articles">
+        <div class="container">
+            <!--- Catalogue Heading --->
+            <div class="sh-blog-articles-heading">
+                <div>
+                    <span class="sh-blog-articles-eyebrow"><span></span> THE STACKLY JOURNAL</span>
+                    <h2>Explore Ideas.<br><span>Discover What's Next.</span></h2>
+                    <p>Practical guides, fresh perspectives, and thoughtful insights to help you understand the world of
+                        smart living.</p>
+                </div>
+                <div class="sh-blog-articles-total">
+                    <strong id="sh-blog-articles-total">12</strong>
+                    <span>ARTICLES TO EXPLORE</span>
+                </div>
+            </div>
+            <!--- Search and Sorting Toolbar --->
+            <div class="sh-blog-articles-toolbar">
+                <div class="sh-blog-articles-search">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="sh-blog-articles-search"
+                        placeholder="Search articles, topics, or keywords..." aria-label="Search articles"
+                        autocomplete="off">
+                    <button type="button" id="sh-blog-articles-search-clear" aria-label="Clear search" hidden><i
+                            class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="sh-blog-articles-sort">
+                    <label for="sh-blog-articles-sort">Sort by</label>
+                    <select id="sh-blog-articles-sort" aria-label="Sort articles">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="title-asc">Title: A to Z</option>
+                        <option value="title-desc">Title: Z to A</option>
+                        <option value="reading-asc">Quick Reads First</option>
+                        <option value="reading-desc">Long Reads First</option>
+                    </select>
+                </div>
+            </div>
+            <!--- Article Category Filters --->
+            <div class="sh-blog-articles-categories" id="sh-blog-articles-categories"
+                aria-label="Filter articles by category">
+                <button type="button" class="sh-blog-articles-category active" data-category="all"
+                    aria-pressed="true">All Articles <span>12</span></button>
+                <button type="button" class="sh-blog-articles-category" data-category="smart-home"
+                    aria-pressed="false">Smart Home</button>
+                <button type="button" class="sh-blog-articles-category" data-category="iot" aria-pressed="false">IoT
+                    Technology</button>
+                <button type="button" class="sh-blog-articles-category" data-category="security"
+                    aria-pressed="false">Home Security</button>
+                <button type="button" class="sh-blog-articles-category" data-category="automation"
+                    aria-pressed="false">Automation</button>
+                <button type="button" class="sh-blog-articles-category" data-category="energy"
+                    aria-pressed="false">Energy Efficiency</button>
+                <button type="button" class="sh-blog-articles-category" data-category="guides"
+                    aria-pressed="false">Product Guides</button>
+            </div>
+            <!--- Results Information --->
+            <div class="sh-blog-articles-results">
+                <p id="sh-blog-articles-results-text" aria-live="polite">Showing 6 of 12 articles</p>
+                <button type="button" id="sh-blog-articles-reset" class="sh-blog-articles-reset" hidden><i
+                        class="bi bi-arrow-counterclockwise"></i> Reset filters</button>
+            </div>
+            <!--- Article Cards Grid --->
+            <div class="sh-blog-articles-grid" id="sh-blog-articles-grid"></div>
+            <!--- Empty Search State --->
+            <div class="sh-blog-articles-empty" id="sh-blog-articles-empty" hidden>
+                <span><i class="bi bi-journal-x"></i></span>
+                <h3>No articles found</h3>
+                <p>Try a different keyword or select another category to discover more articles.</p>
+                <button type="button" id="sh-blog-articles-empty-reset">Clear Filters</button>
+            </div>
+            <!--- Load More --->
+            <div class="sh-blog-articles-load-wrap" id="sh-blog-articles-load-wrap">
+                <button type="button" class="sh-blog-articles-load" id="sh-blog-articles-load">
+                    <span>Load More Articles</span><i class="bi bi-arrow-down"></i>
+                </button>
+                <p>Explore more ideas at your own pace.</p>
+            </div>
+            <!--- Catalogue Footer --->
+            <div class="sh-blog-articles-footer">
+                <span><i class="bi bi-lightbulb"></i> Ideas for a more connected life.</span>
+                <a href="404.html">Have a topic in mind? Tell us <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--- All Articles Catalogue Section End --->
+
+    <!--- Section Start --->
+    <!--- Section End --->
+
+    <!--- Section Start --->
+    <!--- Section End --->
+
+    <!--- Section Start --->
+    <!--- Section End --->
+
+    <!--- Footer Component --->
+    <div id="sh-footer-component"></div>
+
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/blog.js"></script>
+    <script src="assets/js/all-hero.js"></script>
+</body>
+
+</html>
