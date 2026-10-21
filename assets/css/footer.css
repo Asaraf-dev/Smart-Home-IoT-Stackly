@@ -43,6 +43,7 @@
 .sh-ftr-brand {display:inline-flex;align-items:center;gap:11px;margin-bottom:22px;color:var(--sh-text);}
 .sh-ftr-brand:hover {color:var(--sh-text);}
 .sh-ftr-brand-icon {display:grid;width:39px;height:39px;place-items:center;border:1px solid rgba(182,255,74,0.3);border-radius:12px;background:var(--sh-primary);color:#10151D;font-size:22px;}
+.sh-ftr-brand-icon img{height: 40px;}
 .sh-ftr-brand-name {font-family:var(--sh-font-heading);font-size:27px;font-weight:700;letter-spacing:-1.5px;}
 .sh-ftr-brand-name span {color:var(--sh-primary);}
 .sh-ftr-brand-description {margin-bottom:20px;color:#8F9BAA;font-size:12px;line-height:2;}
@@ -116,6 +117,7 @@
     .sh-ftr-content {gap:35px 25px;padding:40px 0;}
     .sh-ftr-bottom {justify-content:flex-start;padding-right:55px;}
     .sh-ftr-bottom-center {display:none;}
+    .sh-ftr-brand-icon img{height: 35px;}
 }
 /*--- Footer Responsive 575px ---*/
 @media(max-width:575px) {

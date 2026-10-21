@@ -8,6 +8,7 @@
 .sh-nav-brand:hover {color:var(--sh-text);}
 .sh-nav-brand-icon {display:grid;width:43px;height:43px;place-items:center;border:1px solid rgba(182,255,74,0.3);border-radius:13px;background:var(--sh-primary);color:#10151D;font-size:23px;transition:transform 0.3s ease,box-shadow 0.3s ease;}
 .sh-nav-brand:hover .sh-nav-brand-icon {transform:rotate(-5deg);box-shadow:0 0 25px rgba(182,255,74,0.2);}
+.sh-nav-brand-icon img{height: 40px;}
 .sh-nav-brand-info {display:flex;flex-direction:column;gap:3px;}
 .sh-nav-brand-name {font-family:var(--sh-font-heading);font-size:25px;font-weight:700;letter-spacing:-1.5px;line-height:1;}
 .sh-nav-brand-name span {color:var(--sh-primary);}
@@ -23,7 +24,7 @@
 .sh-nav-link:hover::after,.sh-nav-link.sh-nav-active::after {transform:scaleX(1);}
 .sh-nav-link-number {color:#627082;font-size:9px;font-weight:600;transition:color 0.25s ease;}
 .sh-nav-link.sh-nav-active .sh-nav-link-number,.sh-nav-link:hover .sh-nav-link-number {color:var(--sh-primary);}
-.sh-nav-close,.sh-nav-mobile-login {display:none;}
+.sh-nav-close,.sh-nav-mobile-login {display: none !important;;}
 /*--- Login Action ---*/
 .sh-nav-actions {display:flex;flex-shrink:0;align-items:center;gap:12px;}
 .sh-nav-login {display:inline-flex;min-height:48px;align-items:center;gap:16px;padding:4px 5px 4px 19px;border:1px solid rgba(255,255,255,0.12);border-radius:var(--sh-radius-pill);background:rgba(255,255,255,0.035);color:var(--sh-text);font-size:13px;font-weight:600;transition:border-color 0.3s ease,background 0.3s ease;}
@@ -54,10 +55,12 @@
     .sh-nav-link {gap:16px;padding:17px 8px;border-bottom:1px solid rgba(255,255,255,0.07);font-size:15px;}
     .sh-nav-link::after {right:auto;bottom:-1px;left:8px;width:34px;}
     .sh-nav-link-number {width:22px;font-size:10px;}
-    .sh-nav-mobile-login {display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:auto;padding:16px;border:1px solid rgba(182,255,74,0.25);border-radius:12px;background:rgba(182,255,74,0.06);color:var(--sh-primary);font-size:13px;font-weight:600;}
+    .sh-nav-mobile-login {display: flex !important;justify-content:space-between;margin-top:20px;}
     .sh-nav-actions {gap:10px;}
     .sh-nav-toggle {display:flex;}
     .sh-nav-login {min-height:44px;}
+    .sh-nav-close{display: block !important;}
+      .mobile-non{display: none;}
 }
 /*--- Responsive 767px ---*/
 @media(max-width:767px) {
@@ -65,6 +68,9 @@
     .sh-nav-brand-icon {width:39px;height:39px;font-size:21px;}
     .sh-nav-brand-name {font-size:23px;}
     .sh-nav-brand-tagline {font-size:7px;letter-spacing:1.6px;}
+  
+    .sh-nav-brand-icon img{height: 30px;}
+
 }
 /*--- Responsive 575px ---*/
 @media(max-width:575px) {
@@ -75,7 +81,6 @@
     .sh-nav-brand-name {font-size:21px;}
     .sh-nav-brand-tagline {font-size:6px;letter-spacing:1.3px;}
     .sh-nav-actions {gap:7px;}
-    .sh-nav-login {min-height:40px;gap:8px;padding:3px 4px 3px 11px;font-size:12px;}
     .sh-nav-login-icon {width:30px;height:30px;font-size:15px;}
     .sh-nav-toggle {width:39px;height:39px;}
     .sh-nav-menu {padding:25px 20px;}

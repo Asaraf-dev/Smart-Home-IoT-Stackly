@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/auth.css">
 </head>
+
 <body>
     <!--- Register Page Start --->
     <main class="sh-auth-register">
@@ -17,27 +19,35 @@
         <div class="sh-auth-register-shell">
             <!--- Register Visual --->
             <section class="sh-auth-register-visual">
-                <a href="index.html" class="sh-auth-login-brand"><span class="sh-auth-login-brand-icon"><i class="bi bi-house-gear"></i></span><span>stackly<span>.</span></span></a>
+                <a href="index.html" class="sh-auth-login-brand"><span class="sh-auth-login-brand-icon"><img
+                            src="assets/images/brand-logo.webp" alt=""></span><span>stackly<span>.</span></span></a>
                 <div class="sh-auth-register-visual-content">
                     <span class="sh-auth-login-eyebrow"><span></span> INTELLIGENT LIVING</span>
                     <h1>A smarter life<br>starts <span>with you.</span></h1>
-                    <p>Create your Stackly account and take the first step toward a more connected, comfortable, and intelligent living experience.</p>
+                    <p>Create your Stackly account and take the first step toward a more connected, comfortable, and
+                        intelligent living experience.</p>
                     <div class="sh-auth-login-visual-art">
                         <div class="sh-auth-login-art-orbit sh-auth-login-art-orbit-one"></div>
                         <div class="sh-auth-login-art-orbit sh-auth-login-art-orbit-two"></div>
                         <div class="sh-auth-login-art-orbit sh-auth-login-art-orbit-three"></div>
                         <div class="sh-auth-login-art-house"><i class="bi bi-house-gear"></i><span></span></div>
-                        <div class="sh-auth-login-art-node sh-auth-login-art-node-one"><i class="bi bi-lightbulb"></i></div>
-                        <div class="sh-auth-login-art-node sh-auth-login-art-node-two"><i class="bi bi-shield-check"></i></div>
-                        <div class="sh-auth-login-art-node sh-auth-login-art-node-three"><i class="bi bi-thermometer-half"></i></div>
+                        <div class="sh-auth-login-art-node sh-auth-login-art-node-one"><i class="bi bi-lightbulb"></i>
+                        </div>
+                        <div class="sh-auth-login-art-node sh-auth-login-art-node-two"><i
+                                class="bi bi-shield-check"></i></div>
+                        <div class="sh-auth-login-art-node sh-auth-login-art-node-three"><i
+                                class="bi bi-thermometer-half"></i></div>
                         <div class="sh-auth-login-art-node sh-auth-login-art-node-four"><i class="bi bi-wifi"></i></div>
                     </div>
                 </div>
-                <div class="sh-auth-login-visual-footer"><span><i class="bi bi-shield-check"></i> SMARTER SPACES. SIMPLER LIVING.</span><span>STACKLY © <span id="sh-auth-register-year"></span></span></div>
+                <div class="sh-auth-login-visual-footer"><span><i class="bi bi-shield-check"></i> SMARTER SPACES.
+                        SIMPLER LIVING.</span><span>STACKLY © <span id="sh-auth-register-year"></span></span></div>
             </section>
             <!--- Register Form Panel --->
             <section class="sh-auth-register-panel">
-                <div class="sh-auth-login-mobile-brand"><a href="index.html" class="sh-auth-login-brand"><span class="sh-auth-login-brand-icon"><i class="bi bi-house-gear"></i></span><span>stackly<span>.</span></span></a></div>
+                <div class="sh-auth-login-mobile-brand"><a href="index.html" class="sh-auth-login-brand"><span
+                            class="sh-auth-login-brand-icon"><img src="assets/images/brand-logo.webp"
+                                alt=""></span><span>stackly<span>.</span></span></a></div>
                 <div class="sh-auth-register-form-wrap">
                     <div class="sh-auth-login-heading sh-auth-register-heading">
                         <span class="sh-auth-login-form-eyebrow">JOIN STACKLY</span>
@@ -50,15 +60,19 @@
                             <legend>Choose account type <span>*</span></legend>
                             <div class="sh-auth-login-role-options">
                                 <label class="sh-auth-login-role-card is-selected" for="sh-auth-register-admin">
-                                    <input type="radio" name="account_type" id="sh-auth-register-admin" value="admin" checked required>
+                                    <input type="radio" name="account_type" id="sh-auth-register-admin" value="admin"
+                                        checked required>
                                     <span class="sh-auth-login-role-icon"><i class="bi bi-shield-lock"></i></span>
-                                    <span class="sh-auth-login-role-copy"><strong>Admin</strong><small>Manage platform</small></span>
+                                    <span class="sh-auth-login-role-copy"><strong>Admin</strong><small>Manage
+                                            platform</small></span>
                                     <span class="sh-auth-login-role-check"><i class="bi bi-check-lg"></i></span>
                                 </label>
                                 <label class="sh-auth-login-role-card" for="sh-auth-register-client">
-                                    <input type="radio" name="account_type" id="sh-auth-register-client" value="client" required>
+                                    <input type="radio" name="account_type" id="sh-auth-register-client" value="client"
+                                        required>
                                     <span class="sh-auth-login-role-icon"><i class="bi bi-person"></i></span>
-                                    <span class="sh-auth-login-role-copy"><strong>Client</strong><small>Your dashboard</small></span>
+                                    <span class="sh-auth-login-role-copy"><strong>Client</strong><small>Your
+                                            dashboard</small></span>
                                     <span class="sh-auth-login-role-check"><i class="bi bi-check-lg"></i></span>
                                 </label>
                             </div>
@@ -66,22 +80,40 @@
                         <!--- Full Name --->
                         <div class="sh-auth-login-group">
                             <label for="sh-auth-register-name">Full Name <span>*</span></label>
-                            <div class="sh-auth-login-input-wrap"><i class="bi bi-person sh-auth-login-input-icon"></i><input type="text" id="sh-auth-register-name" name="name" placeholder="Enter your full name" autocomplete="name" pattern="[A-Za-z ]+" title="Enter letters and spaces only." required></div>
+                            <div class="sh-auth-login-input-wrap"><i
+                                    class="bi bi-person sh-auth-login-input-icon"></i><input type="text"
+                                    id="sh-auth-register-name" name="name" placeholder="Enter your full name"
+                                    autocomplete="name" pattern="[A-Za-z ]+" title="Enter letters and spaces only."
+                                    required></div>
                         </div>
                         <!--- Phone Number --->
                         <div class="sh-auth-login-group">
                             <label for="sh-auth-register-phone">Phone Number <span>*</span></label>
-                            <div class="sh-auth-login-input-wrap"><i class="bi bi-telephone sh-auth-login-input-icon"></i><input type="tel" id="sh-auth-register-phone" name="phone" placeholder="Enter 10-digit mobile number" inputmode="numeric" autocomplete="tel-national" minlength="10" maxlength="10" pattern="[0-9]{10}" title="Enter exactly 10 digits." required></div>
+                            <div class="sh-auth-login-input-wrap"><i
+                                    class="bi bi-telephone sh-auth-login-input-icon"></i><input type="tel"
+                                    id="sh-auth-register-phone" name="phone" placeholder="Enter 10-digit mobile number"
+                                    inputmode="numeric" autocomplete="tel-national" minlength="10" maxlength="10"
+                                    pattern="[0-9]{10}" title="Enter exactly 10 digits." required></div>
                         </div>
                         <!--- Email Address --->
                         <div class="sh-auth-login-group">
                             <label for="sh-auth-register-email">Email Address <span>*</span></label>
-                            <div class="sh-auth-login-input-wrap"><i class="bi bi-envelope sh-auth-login-input-icon"></i><input type="email" id="sh-auth-register-email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+                            <div class="sh-auth-login-input-wrap"><i
+                                    class="bi bi-envelope sh-auth-login-input-icon"></i><input type="email"
+                                    id="sh-auth-register-email" name="email" placeholder="you@example.com"
+                                    autocomplete="email" required></div>
                         </div>
                         <!--- Password --->
                         <div class="sh-auth-login-group">
                             <label for="sh-auth-register-password">Password <span>*</span></label>
-                            <div class="sh-auth-login-input-wrap"><i class="bi bi-lock sh-auth-login-input-icon"></i><input type="password" id="sh-auth-register-password" name="password" placeholder="Create a strong password" autocomplete="new-password" minlength="8" aria-describedby="sh-auth-register-password-rules" required><button type="button" class="sh-auth-login-password-toggle" data-password-toggle="sh-auth-register-password" aria-label="Show password" aria-pressed="false"><i class="bi bi-eye"></i></button></div>
+                            <div class="sh-auth-login-input-wrap"><i
+                                    class="bi bi-lock sh-auth-login-input-icon"></i><input type="password"
+                                    id="sh-auth-register-password" name="password"
+                                    placeholder="Create a strong password" autocomplete="new-password" minlength="8"
+                                    aria-describedby="sh-auth-register-password-rules" required><button type="button"
+                                    class="sh-auth-login-password-toggle"
+                                    data-password-toggle="sh-auth-register-password" aria-label="Show password"
+                                    aria-pressed="false"><i class="bi bi-eye"></i></button></div>
                             <!--<div class="sh-auth-register-password-rules" id="sh-auth-register-password-rules">
                                 <span data-rule="length"><i class="bi bi-circle"></i> 8+ characters</span>
                                 <span data-rule="uppercase"><i class="bi bi-circle"></i> Uppercase letter</span>
@@ -93,14 +125,24 @@
                         <!--- Confirm Password --->
                         <div class="sh-auth-login-group">
                             <label for="sh-auth-register-confirm-password">Confirm Password <span>*</span></label>
-                            <div class="sh-auth-login-input-wrap"><i class="bi bi-lock-fill sh-auth-login-input-icon"></i><input type="password" id="sh-auth-register-confirm-password" name="confirm_password" placeholder="Re-enter your password" autocomplete="new-password" required><button type="button" class="sh-auth-login-password-toggle" data-password-toggle="sh-auth-register-confirm-password" aria-label="Show confirm password" aria-pressed="false"><i class="bi bi-eye"></i></button></div>
+                            <div class="sh-auth-login-input-wrap"><i
+                                    class="bi bi-lock-fill sh-auth-login-input-icon"></i><input type="password"
+                                    id="sh-auth-register-confirm-password" name="confirm_password"
+                                    placeholder="Re-enter your password" autocomplete="new-password" required><button
+                                    type="button" class="sh-auth-login-password-toggle"
+                                    data-password-toggle="sh-auth-register-confirm-password"
+                                    aria-label="Show confirm password" aria-pressed="false"><i
+                                        class="bi bi-eye"></i></button></div>
                         </div>
                         <!--- Create Account --->
-                        <button type="submit" class="sh-auth-login-submit sh-auth-register-submit"><span>Create Account</span><i class="bi bi-arrow-up-right"></i></button>
+                        <button type="submit" class="sh-auth-login-submit sh-auth-register-submit"><span>Create
+                                Account</span><i class="bi bi-arrow-up-right"></i></button>
                         <div class="sh-auth-login-divider"><span>ALREADY A MEMBER?</span></div>
-                        <p class="sh-auth-login-signup">Already have an account? <a href="login.html">Sign In <i class="bi bi-arrow-up-right"></i></a></p>
+                        <p class="sh-auth-login-signup">Already have an account? <a href="login.html">Sign In <i
+                                    class="bi bi-arrow-up-right"></i></a></p>
                     </form>
-                    <p class="sh-auth-login-privacy"><i class="bi bi-shield-check"></i> A smarter living experience starts here.</p>
+                    <p class="sh-auth-login-privacy"><i class="bi bi-shield-check"></i> A smarter living experience
+                        starts here.</p>
                 </div>
             </section>
         </div>
@@ -109,4 +151,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/auth.js"></script>
 </body>
+
 </html>
